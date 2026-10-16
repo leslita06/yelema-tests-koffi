@@ -1,0 +1,46 @@
+/* FICTIF · Système de design Youki nouvelle vague 2027, v1 du 16/10/2026. Valeurs relevées sur solibra.ci sauf mention « proposé ». */
+:root{
+  --fond-page:#FFFFFF; /* relevé (fond du site) */
+  --fond-section:#F6F6F6; /* relevé */
+  --surface-carte:#FFFFFF; /* relevé */
+  --bordure-decor:#EDEDED; /* relevé */
+  --bordure-champ:#7C7E84; /* relevé (gris du site) */
+  --texte-principal:#27282C; /* relevé */
+  --texte-courant:#4F4F4F; /* relevé */
+  --texte-inverse:#FFFFFF; /* relevé */
+  --action:#047034; /* relevé (vert Youki) */
+  --action-survol:#035125; /* proposé (nuance 700 du vert, ds 081) */
+  --action-presse:#02411E; /* proposé (nuance 800 du vert, ds 081) */
+  --accent-marque:#FDDE14; /* relevé (jaune Youki) */
+  --decor-soleil:#EA8927; /* relevé (orange Youki) */
+  --contour-mot:#004A1F; /* relevé (vert foncé du mot Youki) */
+  --signature-corporate:#CA0030; /* relevé (rouge sceau) */
+  --succes:#047034; /* relevé (vert Youki, repris) */
+  --erreur:#CA0030; /* relevé (rouge sceau, repris) */
+  --avertissement:#EA8927; /* relevé (orange Youki, texte noir seul) */
+  --desactive-fond:#EDEDED; /* relevé */
+  --desactive-texte:#7C7E84; /* relevé */
+  --focus:#27282C; /* relevé (noir Solibra) */
+  --esp-1:4px;
+  --esp-2:8px;
+  --esp-3:16px;
+  --esp-4:24px;
+  --esp-5:32px;
+  --esp-6:48px;
+  --esp-7:64px;
+  --arrondi-champ:3px;
+  --arrondi-carte:5px;
+  --arrondi-bouton:10px;
+  --arrondi-panneau:20px;
+  --arrondi-pastille:50%;
+  --trait-fin:1px;
+  --trait-fort:2px;
+  --trait-focus:3px;
+  --elevation-0:none;
+  --elevation-1:0 0 9.8px rgba(0,0,0,.1);
+  --police-texte:'Noto Sans','Noto-latin','DejaVu Sans',Arial,sans-serif;
+  --police-accroche:'Baloo 2','Noto Sans','DejaVu Sans',Arial,sans-serif;
+}
+@font-face{font-family:'Noto Sans';font-weight:400;font-display:swap;src:url(polices/NotoSans-400.woff2) format('woff2')}
+@font-face{font-family:'Noto Sans';font-weight:700;font-display:swap;src:url(polices/NotoSans-700.woff2) format('woff2')}
+@font-face{font-family:'Baloo 2';font-weight:800;font-display:swap;src:url(polices/Baloo2-800.woff2) format('woff2')}

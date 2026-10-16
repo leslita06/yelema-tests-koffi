@@ -1,0 +1,113 @@
+{
+ "couleur": {
+  "fond-page": {
+   "valeur": "#FFFFFF",
+   "source": "relevé (fond du site)"
+  },
+  "fond-section": {
+   "valeur": "#F6F6F6",
+   "source": "relevé"
+  },
+  "surface-carte": {
+   "valeur": "#FFFFFF",
+   "source": "relevé"
+  },
+  "bordure-decor": {
+   "valeur": "#EDEDED",
+   "source": "relevé"
+  },
+  "bordure-champ": {
+   "valeur": "#7C7E84",
+   "source": "relevé (gris du site)"
+  },
+  "texte-principal": {
+   "valeur": "#27282C",
+   "source": "relevé"
+  },
+  "texte-courant": {
+   "valeur": "#4F4F4F",
+   "source": "relevé"
+  },
+  "texte-inverse": {
+   "valeur": "#FFFFFF",
+   "source": "relevé"
+  },
+  "action": {
+   "valeur": "#047034",
+   "source": "relevé (vert Youki)"
+  },
+  "action-survol": {
+   "valeur": "#035125",
+   "source": "proposé (nuance 700 du vert, ds 081)"
+  },
+  "action-presse": {
+   "valeur": "#02411E",
+   "source": "proposé (nuance 800 du vert, ds 081)"
+  },
+  "accent-marque": {
+   "valeur": "#FDDE14",
+   "source": "relevé (jaune Youki)"
+  },
+  "decor-soleil": {
+   "valeur": "#EA8927",
+   "source": "relevé (orange Youki)"
+  },
+  "contour-mot": {
+   "valeur": "#004A1F",
+   "source": "relevé (vert foncé du mot Youki)"
+  },
+  "signature-corporate": {
+   "valeur": "#CA0030",
+   "source": "relevé (rouge sceau)"
+  },
+  "succes": {
+   "valeur": "#047034",
+   "source": "relevé (vert Youki, repris)"
+  },
+  "erreur": {
+   "valeur": "#CA0030",
+   "source": "relevé (rouge sceau, repris)"
+  },
+  "avertissement": {
+   "valeur": "#EA8927",
+   "source": "relevé (orange Youki, texte noir seul)"
+  },
+  "desactive-fond": {
+   "valeur": "#EDEDED",
+   "source": "relevé"
+  },
+  "desactive-texte": {
+   "valeur": "#7C7E84",
+   "source": "relevé"
+  },
+  "focus": {
+   "valeur": "#27282C",
+   "source": "relevé (noir Solibra)"
+  }
+ },
+ "espace": {
+  "esp-1": 4,
+  "esp-2": 8,
+  "esp-3": 16,
+  "esp-4": 24,
+  "esp-5": 32,
+  "esp-6": 48,
+  "esp-7": 64
+ },
+ "arrondi": {
+  "arrondi-champ": "3px",
+  "arrondi-carte": "5px",
+  "arrondi-bouton": "10px",
+  "arrondi-panneau": "20px",
+  "arrondi-pastille": "50%"
+ },
+ "trait": {
+  "trait-fin": "1px",
+  "trait-fort": "2px",
+  "trait-focus": "3px"
+ },
+ "elevation": {
+  "elevation-0": "none",
+  "elevation-1": "0 0 9.8px rgba(0,0,0,.1)"
+ }
+}
