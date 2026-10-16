@@ -1,0 +1,71 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>FICTIF · Solibra · design system de marque v1</title>
+<style>body{margin:0;background:#27282C;font-family:'Work Sans',Arial,sans-serif;color:#F6F6F6}.fictif{background:#CA0030;color:#fff;font-weight:700;padding:10px 16px;font-size:14px}main{max-width:1280px;margin:0 auto;padding:16px;display:flex;flex-direction:column;gap:16px}img{width:100%;height:auto;display:block;border-radius:4px}pre{background:#1b1c1f;padding:14px;overflow-x:auto;font-size:12px;white-space:pre-wrap;word-break:break-all}a{color:#FDDE14}</style></head><body>
+<div class="fictif">FICTIF · document de test. Personnes, chiffres internes et scénario « Youki, nouvelle vague 2027 » inventés. Réel : Solibra, ses marques, son logo et les informations publiques citées (solibra.ci, relevé du 16/10/2026). Non validé par la marque.</div>
+<main><h1 style="margin:8px 0 0;font-size:24px">Solibra · design system de marque (v1, 19 pages)</h1>
+<p><a href="solibra-design-system_v1.pdf">PDF</a> · <a href="tokens.css">tokens.css</a> · <a href="design-tokens.md">design-tokens.md</a></p>
+<img src="p/p-01.jpg" alt="Solibra, design system FICTIF, page 1" loading="lazy"><img src="p/p-02.jpg" alt="Solibra, design system FICTIF, page 2" loading="lazy"><img src="p/p-03.jpg" alt="Solibra, design system FICTIF, page 3" loading="lazy"><img src="p/p-04.jpg" alt="Solibra, design system FICTIF, page 4" loading="lazy"><img src="p/p-05.jpg" alt="Solibra, design system FICTIF, page 5" loading="lazy"><img src="p/p-06.jpg" alt="Solibra, design system FICTIF, page 6" loading="lazy"><img src="p/p-07.jpg" alt="Solibra, design system FICTIF, page 7" loading="lazy"><img src="p/p-08.jpg" alt="Solibra, design system FICTIF, page 8" loading="lazy"><img src="p/p-09.jpg" alt="Solibra, design system FICTIF, page 9" loading="lazy"><img src="p/p-10.jpg" alt="Solibra, design system FICTIF, page 10" loading="lazy"><img src="p/p-11.jpg" alt="Solibra, design system FICTIF, page 11" loading="lazy"><img src="p/p-12.jpg" alt="Solibra, design system FICTIF, page 12" loading="lazy"><img src="p/p-13.jpg" alt="Solibra, design system FICTIF, page 13" loading="lazy"><img src="p/p-14.jpg" alt="Solibra, design system FICTIF, page 14" loading="lazy"><img src="p/p-15.jpg" alt="Solibra, design system FICTIF, page 15" loading="lazy"><img src="p/p-16.jpg" alt="Solibra, design system FICTIF, page 16" loading="lazy"><img src="p/p-17.jpg" alt="Solibra, design system FICTIF, page 17" loading="lazy"><img src="p/p-18.jpg" alt="Solibra, design system FICTIF, page 18" loading="lazy"><img src="p/p-19.jpg" alt="Solibra, design system FICTIF, page 19" loading="lazy"><h2 style="font-size:18px">Variables (tokens.css)</h2><pre>:root{
+  --fond-sombre:#27282C;
+  --principale:#CA0030;
+  --principale-050:#FFEBEF;
+  --principale-100:#FFD6E0;
+  --principale-200:#FFADC1;
+  --principale-300:#FF7092;
+  --principale-400:#FF1E53;
+  --principale-500:#CA0030;
+  --principale-600:#AE0029;
+  --principale-700:#910023;
+  --principale-800:#75001C;
+  --principale-900:#590015;
+  --accent:#E9212E;
+  --texte-courant:#4F4F4F;
+  --fond-clair:#F6F6F6;
+  --youki-jaune:#FDDE14;
+  --youki-jaune-050:#FFFCEB;
+  --youki-jaune-100:#FFF9D7;
+  --youki-jaune-200:#FEF4AE;
+  --youki-jaune-300:#FEEB71;
+  --youki-jaune-400:#FDE543;
+  --youki-jaune-500:#FDDE14;
+  --youki-jaune-600:#E9CA02;
+  --youki-jaune-700:#C3A902;
+  --youki-jaune-800:#9D8801;
+  --youki-jaune-900:#776701;
+  --youki-vert:#047034;
+  --youki-vert-050:#EBFEF4;
+  --youki-vert-100:#D8FEE8;
+  --youki-vert-200:#B0FCD2;
+  --youki-vert-300:#75FAB0;
+  --youki-vert-400:#08E96C;
+  --youki-vert-500:#047034;
+  --youki-vert-600:#03602D;
+  --youki-vert-700:#035125;
+  --youki-vert-800:#02411E;
+  --youki-vert-900:#023117;
+  --youki-orange:#EA8927;
+  --police-titre:&#x27;TCCC-UnityText&#x27;;
+  --police-corps:&#x27;TCCC-UnityText&#x27;;
+  --police-label:&#x27;TCCC-UnityText&#x27;;
+  --taille-bandeau-d-accroche-site:34px;
+  --taille-titre-de-section-h3-site:24px;
+  --taille-texte-courant-site:16px;
+  --taille-menu-lien-en-capitales-site:13px;
+  --taille-titre-de-couverture:64px;
+  --taille-titre-de-diapositive:38px;
+  --esp-1:4px;
+  --esp-2:8px;
+  --esp-3:16px;
+  --esp-4:24px;
+  --esp-5:32px;
+  --esp-6:48px;
+  --esp-7:64px;
+}
+
+/* Polices : TCCC-UnityText relevée (sous licence, non embarquée), Work Sans = secours proposé */
+:root{
+  --police-titre:&#x27;TCCC-UnityText&#x27;,&#x27;Work Sans&#x27;,&#x27;Liberation Sans&#x27;,Arial,sans-serif;
+  --police-corps:&#x27;TCCC-UnityText&#x27;,&#x27;Work Sans&#x27;,&#x27;Liberation Sans&#x27;,Arial,sans-serif;
+  --police-label:&#x27;TCCC-UnityText&#x27;,&#x27;Work Sans&#x27;,&#x27;Liberation Sans&#x27;,Arial,sans-serif;
+  --graisse-titre:700; --graisse-corps:400; --graisse-label:500;
+  --interligne-corps:25px; --casse-label:uppercase; --approche-label:2.1px;
+}
+</pre></main></body></html>
