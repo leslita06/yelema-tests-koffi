@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Advans Côte d'Ivoire · Proposition de refonte de la page d'accueil</title>
+<meta name="description" content="Institution de microfinance en Côte d'Ivoire depuis 2012 : crédit urbain, crédit agricole, épargne, comptes courants, assurance et MyAdvans.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--vert:#008237;--vert-f:#00632A;--vert-n:#0B3B22;--anis:#95C11F;--jaune:#FFCC00;--encre:#282828;--gris:#656564;--clair:#F4F6F1;--filet:#E3E8DF;--r:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Ubuntu,'Segoe UI',Arial,sans-serif;color:var(--encre);font-size:17px;line-height:1.55;background:#fff}
+img{max-width:100%;display:block}a{color:inherit}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.demo{background:var(--encre);color:#fff;font-size:13px;text-align:center;padding:7px 16px}
+.demo b{color:var(--jaune)}
+/* barre haute */
+.top{background:var(--vert-n);color:#dfe9e2;font-size:14px}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;gap:16px}
+.top a{text-decoration:none;color:#fff}.top .pays{display:flex;gap:14px;opacity:.85}
+.top .pays a{opacity:.7}.top .pays a.on{opacity:1;font-weight:700;color:var(--jaune)}
+/* en-tête */
+header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--filet)}
+header .wrap{display:flex;align-items:center;gap:28px;height:78px}
+.logo img{height:30px;width:auto}
+nav{display:flex;gap:22px;font-size:15.5px;font-weight:500;margin-left:auto}
+nav a{text-decoration:none;color:var(--encre);padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--anis)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;border-radius:999px;padding:14px 26px;font-size:16px;border:0;cursor:pointer;font-family:inherit;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-j{background:var(--jaune);color:var(--encre)}
+.btn-v{background:var(--vert);color:#fff}
+.btn-w{background:#fff;color:var(--vert-n)}
+.btn-o{border:2px solid rgba(255,255,255,.7);color:#fff;background:transparent}
+.btn svg{width:20px;height:20px}
+.burger{display:none}
+/* hero */
+.hero{position:relative;min-height:640px;color:#fff;display:flex;align-items:center;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url(img/hero.jpg) 70% 30%/cover}
+.hero .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,59,34,.96) 0%,rgba(0,99,42,.88) 38%,rgba(0,99,42,.25) 68%,rgba(0,0,0,0) 100%)}
+.hero .wrap{position:relative;width:100%}
+.hero .txt{max-width:600px;padding:70px 0}
+.kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 14px;font-size:14px;margin-bottom:22px}
+.kicker i{width:8px;height:8px;border-radius:50%;background:var(--jaune);display:block}
+h1{font-size:54px;line-height:1.08;margin:0 0 20px;font-weight:700;letter-spacing:-.5px}
+h1 em{font-style:normal;color:var(--jaune)}
+.hero p.lead{font-size:19px;color:#e6f0e9;margin:0 0 32px}
+.ctas{display:flex;gap:14px;flex-wrap:wrap}
+.prix{position:absolute;right:24px;bottom:28px;background:#fff;color:var(--encre);border-radius:16px;padding:14px 18px;display:flex;gap:14px;align-items:center;box-shadow:0 18px 40px rgba(0,0,0,.25);max-width:330px}
+.prix b{font-size:34px;color:var(--vert);line-height:1}
+.prix span{font-size:14px;line-height:1.3}
+/* raccourcis */
+.raccourcis{margin-top:-46px;position:relative;z-index:3}
+.racc{background:#fff;border-radius:22px;box-shadow:0 20px 50px rgba(11,59,34,.14);padding:22px 26px;display:grid;grid-template-columns:auto repeat(5,1fr);gap:14px;align-items:center}
+.racc h2{font-size:17px;margin:0 10px 0 0;color:var(--vert-n)}
+.racc a{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:500;font-size:15px;padding:12px 14px;border-radius:14px;background:var(--clair);border:1px solid transparent}
+.racc a:hover{border-color:var(--anis);background:#fff}
+.racc svg{width:26px;height:26px;flex:none;color:var(--vert)}
+section{padding:90px 0}
+.eyebrow{color:var(--vert);font-weight:700;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 10px}
+h2.t{font-size:38px;line-height:1.15;margin:0 0 14px;letter-spacing:-.3px}
+.intro{max-width:640px;color:var(--gris);margin:0 0 44px;font-size:18px}
+/* offres */
+.offres{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.carte{border:1px solid var(--filet);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:12px;text-decoration:none;transition:.2s;background:#fff}
+.carte:hover{border-color:var(--vert);box-shadow:0 14px 30px rgba(0,130,55,.12);transform:translateY(-3px)}
+.carte .ic{width:54px;height:54px;border-radius:14px;background:#EAF4D6;display:grid;place-items:center;color:var(--vert)}
+.carte .ic svg{width:28px;height:28px}
+.carte h3{margin:6px 0 0;font-size:22px}
+.carte p{margin:0;color:var(--gris);font-size:16px;flex:1}
+.carte .lien{color:var(--vert);font-weight:700;font-size:15px}
+/* deux mondes */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.monde{position:relative;border-radius:24px;overflow:hidden;min-height:420px;color:#fff;display:flex;align-items:flex-end}
+.monde img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.monde:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(11,59,34,.95) 100%)}
+.monde div{position:relative;z-index:2;padding:32px}
+.monde h3{font-size:28px;margin:0 0 8px}.monde p{margin:0 0 18px;color:#e5efe7}
+/* chiffres */
+.chiffres{background:var(--vert-n);color:#fff;padding:70px 0}
+.ch{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.ch div{border-left:3px solid var(--anis);padding-left:20px}
+.ch b{display:block;font-size:46px;line-height:1.05;color:var(--jaune)}
+.ch span{font-size:17px}.ch small{display:block;color:#b9cdbf;font-size:14px;margin-top:4px}
+/* app */
+.app{background:var(--clair)}
+.appbox{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.liste{list-style:none;padding:0;margin:0 0 30px}
+.liste li{display:flex;gap:12px;align-items:flex-start;margin:0 0 12px}
+.liste li:before{content:"";width:22px;height:22px;border-radius:50%;background:var(--vert) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/14px no-repeat;flex:none;margin-top:3px}
+.stores{display:flex;gap:12px;flex-wrap:wrap}
+.store{display:flex;align-items:center;gap:10px;background:var(--encre);color:#fff;text-decoration:none;border-radius:12px;padding:10px 18px}
+.store svg{width:24px;height:24px}.store small{display:block;font-size:11px;opacity:.75;line-height:1}.store b{font-size:16px;line-height:1.2}
+.phone{justify-self:center;width:290px;height:560px;border-radius:44px;background:var(--encre);padding:14px;box-shadow:0 30px 60px rgba(0,0,0,.25)}
+.screen{height:100%;border-radius:32px;background:linear-gradient(170deg,var(--vert) 0%,var(--vert-n) 100%);color:#fff;padding:30px 22px;display:flex;flex-direction:column;gap:14px}
+.screen .bal{background:rgba(255,255,255,.12);border-radius:18px;padding:16px}
+.screen .bal small{opacity:.8}.screen .bal b{display:block;font-size:24px;letter-spacing:2px}
+.screen .g{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.screen .g span{background:#fff;color:var(--vert-n);border-radius:14px;padding:14px 10px;font-size:13px;font-weight:700;text-align:center}
+.screen .ph{font-size:11px;opacity:.7;margin-top:auto;text-align:center}
+/* témoignage */
+.temo{display:grid;grid-template-columns:.95fr 1.05fr;gap:50px;align-items:center}
+.temo img{border-radius:24px;width:100%;aspect-ratio:577/320;object-fit:cover}
+blockquote{margin:0;font-size:26px;line-height:1.4;font-weight:500}
+blockquote:before{content:"“";display:block;font-size:80px;line-height:.6;color:var(--anis);margin-bottom:8px}
+.qui{margin-top:20px}.qui b{color:var(--vert);font-size:18px}.qui span{display:block;color:var(--gris);font-size:15px}
+/* agences */
+.agences{background:var(--clair)}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.ag img{border-radius:24px}
+/* actus */
+.actus{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.actu{text-decoration:none;border-radius:var(--r);overflow:hidden;border:1px solid var(--filet);background:#fff}
+.actu img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block}
+.actu div{padding:20px}.actu small{color:var(--vert);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:1px}
+.actu h3{margin:6px 0 0;font-size:19px;line-height:1.3}
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.canaux{display:grid;gap:14px}
+.canal{display:flex;gap:16px;align-items:center;border:1px solid var(--filet);border-radius:16px;padding:18px 20px;text-decoration:none}
+.canal:hover{border-color:var(--vert)}
+.canal .ic{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;color:#fff;flex:none}
+.canal .ic svg{width:24px;height:24px}
+.canal b{display:block;font-size:18px}.canal span{color:var(--gris);font-size:15px}
+form{background:var(--clair);border-radius:22px;padding:30px;display:grid;gap:14px}
+form h3{margin:0;font-size:22px}
+label{font-size:14px;font-weight:500;display:grid;gap:6px}
+input,select,textarea{font:inherit;font-size:16px;padding:13px 14px;border:1px solid #cfd8c9;border-radius:12px;background:#fff}
+input:focus,select:focus,textarea:focus{outline:3px solid rgba(149,193,31,.5);border-color:var(--vert)}
+.note{font-size:13px;color:var(--gris);margin:0}
+.msg{display:none;background:#fff8d6;border:1px solid var(--jaune);border-radius:12px;padding:12px 14px;font-size:15px}
+/* pied */
+footer{background:var(--encre);color:#cfd3cf;padding:60px 0 30px;font-size:15px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+footer h4{color:#fff;margin:0 0 14px;font-size:16px}
+footer a{text-decoration:none;color:#cfd3cf;display:block;margin:0 0 8px}footer a:hover{color:var(--jaune)}
+.soc{display:flex;gap:10px;margin-top:16px}
+.soc a{width:42px;height:42px;border-radius:50%;background:#3a3a3a;display:grid;place-items:center;margin:0}
+.soc a:hover{background:var(--vert)}.soc svg{width:20px;height:20px;fill:#fff}
+.legal{border-top:1px solid #3d3d3d;margin-top:40px;padding-top:20px;font-size:13px;color:#9a9e9a;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.wa{position:fixed;right:22px;bottom:22px;z-index:30;width:62px;height:62px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.25)}
+.wa svg{width:32px;height:32px;fill:#fff}
+@media(max-width:960px){
+ nav,.top .pays,header .btn{display:none}.burger{display:block;margin-left:auto;background:none;border:0}.burger svg{width:30px;height:30px}
+ h1{font-size:38px}.hero{min-height:600px}.hero .bg{background-position:72% 30%}.hero .bg:after{background:linear-gradient(180deg,rgba(11,59,34,.55) 0%,rgba(0,99,42,.92) 55%,rgba(11,59,34,.98) 100%)}
+ .hero .txt{padding:180px 0 110px}.prix{left:24px;right:auto;bottom:24px}
+ .racc{grid-template-columns:1fr 1fr}.racc h2{grid-column:1/-1}
+ .offres,.actus{grid-template-columns:1fr}.duo,.appbox,.temo,.ag,.contact{grid-template-columns:1fr}
+ .ch{grid-template-columns:1fr 1fr;gap:30px}.ch b{font-size:36px}
+ h2.t{font-size:30px}section{padding:64px 0}.fgrid{grid-template-columns:1fr 1fr}blockquote{font-size:21px}
+ .phone{width:250px;height:480px}
+}
+</style>
+</head>
+<body>
+<div class="demo"><b>Maquette de proposition</b> · Refonte de la page d'accueil préparée par Mstudio, non commandée par Advans. Contenus, chiffres et photos Advans repris du site actuel ; photos d'illustration Pexels.</div>
+
+<div class="top"><div class="wrap">
+ <div class="pays" aria-label="Pays Advans"><a href="https://www.advansgroup.com/">Groupe</a><a href="#">Cameroun</a><a class="on" href="#" aria-current="true">Côte d'Ivoire</a><a href="#">Ghana</a><a href="#">Nigeria</a><a href="#">RDC</a><a href="#">Tunisie</a></div>
+ <div><a href="tel:0575584584">Appelez-nous · 05 75 58 45 84</a></div>
+</div></div>
+
+<header><div class="wrap">
+ <a class="logo" href="https://www.advanscotedivoire.com/"><img src="img/logo-advans.svg" alt="Advans Côte d'Ivoire" width="132" height="30"></a>
+ <nav aria-label="Menu principal">
+  <a href="https://www.advanscotedivoire.com/a-propos-de-nous/">À propos</a>
+  <a href="#offres">Nos offres</a>
+  <a href="https://www.advanscotedivoire.com/myadvans/">MyAdvans</a>
+  <a href="https://www.advanscotedivoire.com/reseau-dagences/">Agences</a>
+  <a href="https://www.advanscotedivoire.com/carriere/">Carrière</a>
+  <a href="https://www.advanscotedivoire.com/actualite/">Actualité</a>
+ </nav>
+ <a class="btn btn-j" href="https://www.advanscotedivoire.com/contactez-nous/?contact-form-profil=demande+de+cr%C3%A9dit">Faire une demande</a>
+ <button class="burger" aria-label="Ouvrir le menu"><svg viewBox="0 0 24 24" fill="none" stroke="#282828" stroke-width="2.2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+ <div class="bg" role="img" aria-label="Commerçante à son étal de tomates"></div>
+ <div class="wrap"><div class="txt">
+  <span class="kicker"><i></i>Institution de microfinance en Côte d'Ivoire depuis 2012</span>
+  <h1 id="h1">Nous rendons la finance <em>accessible, responsable et utile</em> à tous</h1>
+  <p class="lead">Crédits, épargne, comptes courants et assurance pour les PME, entrepreneurs, commerçants, artisans, agriculteurs et leurs familles.</p>
+  <div class="ctas">
+   <a class="btn btn-j" href="https://www.advanscotedivoire.com/contactez-nous/?contact-form-profil=demande+de+cr%C3%A9dit">Demander un crédit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+   <a class="btn btn-o" href="https://wa.me/2250575584560"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.8-1.1-4.6-4-4.8-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Écrire sur WhatsApp</a>
+  </div>
+ </div></div>
+ <div class="prix"><b>5</b><span><strong>prix</strong> aux Awards des Journées Nationales de la Microfinance 2026</span></div>
+</section>
+
+<div class="raccourcis"><div class="wrap"><div class="racc">
+ <h2>Je veux…</h2>
+ <a href="https://www.advanscotedivoire.com/credit/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-5 9 5v1H3zM5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/></svg>Financer mon activité</a>
+ <a href="https://www.advanscotedivoire.com/credit-agricole/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21V10M12 10c0-4 3-6 7-6 0 4-3 6-7 6zM12 14c0-3-2.5-5-6-5 0 3.5 2.5 5 6 5z"/></svg>Financer mon exploitation</a>
+ <a href="https://www.advanscotedivoire.com/epargne/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12a7 6 0 0 1 14 0v4h-3v3h-3v-2H9v2H6v-3a6 6 0 0 1-2-4zM15 9.5h.01M18 11h2"/></svg>Épargner</a>
+ <a href="https://www.advanscotedivoire.com/comptes-courants/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg>Ouvrir un compte</a>
+ <a href="https://www.advanscotedivoire.com/reseau-dagences/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Trouver une agence</a>
+</div></div></div>
+
+<section id="offres" aria-labelledby="t-offres"><div class="wrap">
+ <p class="eyebrow">Nos offres</p>
+ <h2 class="t" id="t-offres">Des solutions pour chaque étape de votre activité</h2>
+ <p class="intro">Que vous teniez une boutique, un atelier ou une exploitation, nos conseillers construisent avec vous la solution qui vous convient.</p>
+ <div class="offres">
+  <a class="carte" href="https://www.advanscotedivoire.com/credit/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg></span><h3>Crédit urbain</h3><p>Des crédits classiques ou digitaux pour vos activités, vos investissements ou en cas d'urgence.</p><span class="lien">En savoir plus →</span></a>
+  <a class="carte" href="https://www.advanscotedivoire.com/credit-agricole/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21V10M12 10c0-4 3-6 7-6 0 4-3 6-7 6zM12 14c0-3-2.5-5-6-5 0 3.5 2.5 5 6 5z"/></svg></span><h3>Crédit agricole</h3><p>Pour vos intrants, votre équipement, votre trésorerie ou votre matériel roulant.</p><span class="lien">En savoir plus →</span></a>
+  <a class="carte" href="https://www.advanscotedivoire.com/epargne/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12a7 6 0 0 1 14 0v4h-3v3h-3v-2H9v2H6v-3a6 6 0 0 1-2-4zM15 9.5h.01"/></svg></span><h3>Épargne</h3><p>Épargnez à votre rythme, ou bloquez une somme pour un projet. Vos dépôts sont protégés par le FGDR-UMOA.</p><span class="lien">En savoir plus →</span></a>
+  <a class="carte" href="https://www.advanscotedivoire.com/comptes-courants/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span><h3>Comptes courants</h3><p>Encaissement de chèques, virements et suivi de vos opérations par SMS.</p><span class="lien">En savoir plus →</span></a>
+  <a class="carte" href="https://www.advanscotedivoire.com/services-financiers/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18h2"/></svg></span><h3>Canaux digitaux</h3><p>Advans Mobilité et MyAdvans pour vos dépôts et retraits, sans vous déplacer.</p><span class="lien">En savoir plus →</span></a>
+  <a class="carte" href="https://www.advanscotedivoire.com/assurance/"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><h3>Assurance</h3><p>Santé, auto, moto, hospitalisation et obsèques, pour votre tranquillité d'esprit.</p><span class="lien">En savoir plus →</span></a>
+ </div>
+</div></section>
+
+<section style="padding-top:0" aria-label="En ville et au champ"><div class="wrap"><div class="duo">
+ <div class="monde"><img src="img/commerce.jpg" alt="Commerçante sur un marché" width="1200" height="801" loading="lazy"><div><h3>En ville</h3><p>Commerçants, artisans, PME : un crédit pour votre stock, votre atelier ou votre local.</p><a class="btn btn-j" href="https://www.advanscotedivoire.com/credit/">Le crédit urbain</a></div></div>
+ <div class="monde"><img src="img/agri.jpg" alt="Planteur qui fait sécher des fèves de cacao" width="1200" height="800" loading="lazy"><div><h3>Au champ</h3><p>Planteurs et producteurs : un crédit adapté au calendrier de vos récoltes.</p><a class="btn btn-j" href="https://www.advanscotedivoire.com/credit-agricole/">Le crédit agricole</a></div></div>
+</div></div></section>
+
+<div class="chiffres"><div class="wrap">
+ <h2 class="sr">Advans Côte d'Ivoire en chiffres</h2>
+ <div class="ch">
+  <div><b>250 000+</b><span>clients</span><small>dont plus de 49 000 femmes</small></div>
+  <div><b>85 Md</b><span>F CFA d'encours de crédit</span><small>au service de l'économie ivoirienne</small></div>
+  <div><b>27</b><span>points de distribution</span><small>en ville et en zone rurale</small></div>
+  <div><b>770+</b><span>collaborateurs</span><small>dévoués à vous servir</small></div>
+ </div>
+</div></div>
+
+<section class="app" aria-labelledby="t-app"><div class="wrap"><div class="appbox">
+ <div>
+  <p class="eyebrow">MyAdvans</p>
+  <h2 class="t" id="t-app">Votre agence dans votre poche</h2>
+  <p class="intro" style="margin-bottom:24px">L'application MyAdvans vous fait gagner du temps : des opérations rapides, simples et sécurisées.</p>
+  <ul class="liste"><li>Suivez vos comptes à tout moment</li><li>Faites vos opérations sans vous déplacer</li><li>Gardez le lien avec votre conseiller</li></ul>
+  <div class="stores">
+   <a class="store" href="https://apps.apple.com/ci/app/myadvans-rci-appli-bancaire/id6498630955"><svg viewBox="0 0 24 24" fill="#fff"><path d="M16.4 12.6c0-2.5 2.1-3.7 2.2-3.8-1.2-1.7-3-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.4.8c1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.2zM13.9 5.1c.7-.9 1.2-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg><span><small>Télécharger dans</small><b>l'App Store</b></span></a>
+   <a class="store" href="https://play.google.com/store/apps/details?id=com.advansrci.retailbanking"><svg viewBox="0 0 24 24"><path fill="#34A853" d="M3.6 2.3l10 9.7-10 9.7c-.4-.2-.6-.7-.6-1.2V3.5c0-.5.2-1 .6-1.2z"/><path fill="#FBBC04" d="M17 8.6L13.6 12 17 15.4l3.9-2.2c.8-.5.8-1.9 0-2.4z"/><path fill="#EA4335" d="M13.6 12l-10 9.7c.3.2.8.2 1.2 0L17 15.4z"/><path fill="#4285F4" d="M13.6 12L17 8.6 4.8 2.3c-.4-.2-.9-.2-1.2 0z"/></svg><span><small>Disponible sur</small><b>Google Play</b></span></a>
+  </div>
+ </div>
+ <div class="phone" aria-hidden="true"><div class="screen">
+  <img src="img/logo-advans-blanc.svg" alt="" width="110" height="25" style="width:110px">
+  <div class="bal"><small>Mon compte</small><b>•••• ••• F CFA</b></div>
+  <div class="g"><span>Dépôt</span><span>Retrait</span><span>Virement</span><span>Mon crédit</span></div>
+  <p class="ph">Écran d'illustration, à remplacer par une capture réelle de l'application</p>
+ </div></div>
+</div></div></section>
+
+<section aria-labelledby="t-temo"><div class="wrap"><div class="temo">
+ <img src="img/temoignage-koita.jpg" alt="Koita Biagui dans son élevage de volailles à Azaguié" width="577" height="320" loading="lazy">
+ <div>
+  <p class="eyebrow" id="t-temo">Ils grandissent avec nous</p>
+  <blockquote>La relation avec Advans a commencé il y a 5 ans. J'ai bénéficié de montants progressifs à chaque crédit, me permettant d'améliorer mon business pour atteindre un meilleur niveau.</blockquote>
+  <p class="qui"><b>Koita Biagui</b><span>Élevage de volailles, Azaguié</span></p>
+ </div>
+</div></div></section>
+
+<section class="agences" aria-labelledby="t-ag"><div class="wrap"><div class="ag">
+ <div>
+  <p class="eyebrow">Notre réseau</p>
+  <h2 class="t" id="t-ag">27 agences et points de distribution, près de chez vous</h2>
+  <p class="intro" style="margin-bottom:28px">En ville comme en zone rurale, sur tout le territoire ivoirien, nos équipes vous accueillent pour vos crédits, votre épargne, vos comptes courants et vos assurances.</p>
+  <a class="btn btn-v" href="https://www.advanscotedivoire.com/reseau-dagences/">Trouver mon agence</a>
+ </div>
+ <img src="img/reseau-agences.jpg" alt="Carte du réseau d'agences Advans en Côte d'Ivoire" width="833" height="553" loading="lazy">
+</div></div></section>
+
+<section aria-labelledby="t-actu"><div class="wrap">
+ <p class="eyebrow">Actualité</p>
+ <h2 class="t" id="t-actu" style="margin-bottom:36px">Les dernières nouvelles d'Advans</h2>
+ <div class="actus">
+  <a class="actu" href="https://www.advanscotedivoire.com/insights/partenariat-advans-cote-divoire-et-sephis/"><img src="img/actu-sephis.jpg" alt="" width="800" height="562" loading="lazy"><div><small>Partenariat</small><h3>Partenariat Advans Côte d'Ivoire et SEPHIS</h3></div></a>
+  <a class="actu" href="https://www.advanscotedivoire.com/insights/partenariat-solidaridad/"><img src="img/actu-2.jpg" alt="" width="800" height="533" loading="lazy"><div><small>Partenariat</small><h3>Partenariat SOLIDARIDAD</h3></div></a>
+  <a class="actu" href="https://www.advanscotedivoire.com/insights/advans-chez-vous-la-campagne-assi-est-relancee-en-2025/"><img src="img/actu-assi.jpg" alt="" width="577" height="320" loading="lazy"><div><small>Campagne</small><h3>Advans Chez Vous : la campagne Assi est relancée</h3></div></a>
+ </div>
+</div></section>
+
+<section class="app" id="contact" aria-labelledby="t-contact"><div class="wrap">
+ <p class="eyebrow">Contact</p>
+ <h2 class="t" id="t-contact" style="margin-bottom:36px">Parlons de votre projet</h2>
+ <div class="contact">
+  <div class="canaux">
+   <a class="canal" href="https://wa.me/2250575584560"><span class="ic" style="background:#25D366"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg></span><span><b>WhatsApp Business</b><span>05 75 58 45 60</span></span></a>
+   <a class="canal" href="tel:2521006880"><span class="ic" style="background:var(--vert)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></span><span><b>Centre de relation clients</b><span>25 21 00 68 80</span></span></a>
+   <a class="canal" href="mailto:serviceclient@advanscotedivoire.com"><span class="ic" style="background:var(--vert-n)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><span><b>Par courriel</b><span>serviceclient@advanscotedivoire.com</span></span></a>
+   <div class="canal"><span class="ic" style="background:var(--anis)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><span><b>Siège</b><span>Marcory, boulevard de Brazzaville, carrefour Sainte-Thérèse</span></span></div>
+  </div>
+  <form id="f" novalidate>
+   <h3>On vous rappelle</h3>
+   <label>Votre nom<input name="nom" autocomplete="name" required></label>
+   <label>Votre téléphone<input name="tel" type="tel" autocomplete="tel" required></label>
+   <label>Votre besoin<select name="objet"><option>Demande de crédit</option><option>Ouvrir un compte</option><option>Épargne</option><option>Assurance</option><option>Autre question</option></select></label>
+   <label>Votre message (facultatif)<textarea name="msg" rows="3"></textarea></label>
+   <button class="btn btn-j" type="submit">Être rappelé</button>
+   <p class="msg" id="m" role="status">Ce formulaire de démonstration n'envoie encore rien. Pour être rappelé dès maintenant, écrivez-nous sur WhatsApp au 05 75 58 45 60.</p>
+   <p class="note">Vos données servent uniquement à vous recontacter. <a href="https://www.advanscotedivoire.com/politique-de-confidentialite-2/">Politique de confidentialité</a></p>
+  </form>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <div class="fgrid">
+  <div><img src="img/logo-advans-blanc.svg" alt="Advans Côte d'Ivoire" width="132" height="30" style="height:30px;width:auto;margin-bottom:16px"><p style="margin:0">Institution de microfinance située à Abidjan depuis 2012.<br>Marcory, boulevard de Brazzaville, carrefour Sainte-Thérèse.</p>
+   <div class="soc">
+    <a href="https://www.facebook.com/advanscotedivoire" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.7-.6z"/></svg></a>
+    <a href="https://www.linkedin.com/company/advans-c-te-d'ivoire/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M5 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3.3 9h3.4v11.5H3.3zM9 9h3.3v1.6c.5-.9 1.7-1.9 3.5-1.9 3.6 0 4.2 2.4 4.2 5.4v6.4h-3.4v-5.7c0-1.4 0-3.1-1.9-3.1s-2.2 1.5-2.2 3v5.8H9z"/></svg></a>
+    <a href="https://www.youtube.com/@advanscotedivoire9270" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .4-3.8 31 31 0 0 0-.4-3.8zM10 15V9l5.2 3z"/></svg></a>
+    <a href="https://x.com/AdvansRCI" aria-label="X"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.8L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></svg></a>
+   </div></div>
+  <div><h4>Nos offres</h4><a href="https://www.advanscotedivoire.com/credit/">Crédit urbain</a><a href="https://www.advanscotedivoire.com/credit-agricole/">Crédit agricole</a><a href="https://www.advanscotedivoire.com/epargne/">Épargne</a><a href="https://www.advanscotedivoire.com/comptes-courants/">Comptes courants</a><a href="https://www.advanscotedivoire.com/assurance/">Assurance</a></div>
+  <div><h4>Advans</h4><a href="https://www.advanscotedivoire.com/a-propos-de-nous/">Qui sommes-nous</a><a href="https://www.advanscotedivoire.com/responsabilite/">Responsabilité</a><a href="https://www.advanscotedivoire.com/carriere/">Carrière</a><a href="https://www.advanscotedivoire.com/actualite/">Actualité</a><a href="https://www.advanscotedivoire.com/reseau-dagences/">Nos agences</a></div>
+  <div><h4>Informations</h4><a href="https://www.advanscotedivoire.com/informations-reglementaires/">Infos réglementaires</a><a href="https://www.advanscotedivoire.com/conseils-de-securite/">Conseils de sécurité</a><a href="https://www.advanscotedivoire.com/politique-de-confidentialite-2/">Confidentialité</a><a href="#contact">Contactez-nous</a></div>
+ </div>
+ <div class="legal"><span>© 2026 Advans Côte d'Ivoire</span><span>Dépôts protégés par le Fonds de Garantie des Dépôts et de Résolution dans l'UMOA (FGDR-UMOA)</span></div>
+</div></footer>
+
+<a class="wa" href="https://wa.me/2250575584560" aria-label="Écrire à Advans sur WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.8-1.1-4.6-4-4.8-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
+<script>document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();document.getElementById('m').style.display='block'})</script>
+</body>
+</html>
