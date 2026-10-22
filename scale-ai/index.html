@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Scale AI · Des agents IA au travail dans les PME · I&amp;P × Mstudio</title>
+<meta name="description" content="Scale AI, le programme d'I&P et de Mstudio pour déployer des agents IA au sein des PME accompagnées par les fonds I&P.">
+<link rel="icon" href="assets/logo-mstudio-icone.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500;600;700;800&family=Work+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#232754;--bleu:#007ABB;--cyan:#00AED4;--sarcelle:#00ADA4;--encre:#2B2A35;--ardoise:#8F8F9A;--fond:#F7F8FA;--filet:#E4E8ED;--brun:#532609;
+--t:'Funnel Display',Arial,sans-serif;--x:'Work Sans',Arial,sans-serif;--l:'Space Grotesk',Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:var(--x);color:var(--encre);background:#fff;line-height:1.6;font-size:17px;overflow-x:hidden}
+a{color:inherit}img{max-width:100%;display:block}
+.w{max-width:1180px;margin:0 auto;padding:0 24px}
+.lab{font-family:var(--l);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--bleu)}
+h1,h2,h3{font-family:var(--t);color:var(--nuit);line-height:1.1}
+h2{font-size:clamp(30px,4vw,44px);margin:12px 0 14px;font-weight:700}
+.sub{color:#5b5a66;font-size:19px;max-width:680px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--l);font-weight:700;font-size:15px;text-decoration:none;padding:15px 24px;border-radius:10px;background:var(--bleu);color:#fff;border:0;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{background:#00669d;transform:translateY(-1px)}
+.btn.g{background:transparent;border:1.5px solid rgba(255,255,255,.45)}.btn.g:hover{background:rgba(255,255,255,.08)}
+.draft{background:#FFF4CC;color:#4a3b00;font-size:13px;text-align:center;padding:7px 12px;font-family:var(--l);font-weight:500}
+/* nav */
+header{position:sticky;top:0;z-index:30;background:rgba(35,39,84,.96);backdrop-filter:blur(8px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;font-family:var(--t);font-weight:800;font-size:23px;letter-spacing:-.01em}
+.brand .dot{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--cyan),var(--bleu));display:grid;place-items:center;font-size:15px;font-family:var(--l)}
+.links{display:flex;gap:28px}.links a{color:#d6d9ee;text-decoration:none;font-size:15px}.links a:hover{color:#fff}
+.nav .btn{padding:11px 18px;font-size:14px}
+/* hero */
+.hero{background:var(--nuit);color:#fff;position:relative;overflow:hidden;padding:84px 0 110px}
+.hero:before{content:"";position:absolute;right:-220px;top:-200px;width:720px;height:720px;border-radius:50%;background:radial-gradient(circle,rgba(0,174,212,.35),rgba(0,122,187,0) 65%)}
+.hero .g{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative}
+.duo{display:flex;align-items:center;gap:16px;margin-bottom:30px}
+.duo img{height:44px;width:auto}.duo img:first-child{height:58px}.duo .x{color:#8f94c2;font-family:var(--l);font-size:20px}
+.hero h1{color:#fff;font-size:clamp(40px,5.6vw,68px);font-weight:800;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--cyan),var(--sarcelle));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:#cfd3ec;font-size:20px;margin:22px 0 32px;max-width:560px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+/* console */
+.console{background:#1b1e44;border:1px solid #363b78;border-radius:20px;padding:22px;box-shadow:0 40px 80px rgba(0,0,0,.35)}
+.console .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;font-family:var(--l);font-size:13px;color:#9aa0d0}
+.console .top b{color:#fff;font-size:15px}
+.live{display:inline-flex;align-items:center;gap:7px}.live i{width:8px;height:8px;border-radius:50%;background:#2fd18c;box-shadow:0 0 0 4px rgba(47,209,140,.18)}
+.ag{display:flex;gap:14px;align-items:flex-start;background:#23275a;border-radius:14px;padding:14px 16px;margin-top:10px}
+.ag .ic{flex:none;width:40px;height:40px;border-radius:11px;display:grid;place-items:center}
+.ag .ic svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2}
+.ag h4{font-family:var(--x);font-weight:600;font-size:15px;color:#fff}
+.ag p{margin:2px 0 0;font-size:13.5px;color:#aeb3dc;line-height:1.45}
+.ag .st{margin-left:auto;font-family:var(--l);font-size:11px;font-weight:700;padding:4px 9px;border-radius:20px;white-space:nowrap}
+.ok{background:rgba(47,209,140,.15);color:#5fe3a8}.wt{background:rgba(255,196,68,.15);color:#ffcf6a}
+.console .note{font-size:12px;color:#8186b8;margin-top:12px;text-align:center}
+/* sections */
+section{padding:96px 0}
+.alt{background:var(--fond)}
+.grid{display:grid;gap:20px;margin-top:44px}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g2{grid-template-columns:1fr 1fr}
+.card{background:#fff;border:1px solid var(--filet);border-radius:18px;padding:28px}
+.card h3{font-size:22px;margin:16px 0 8px;font-weight:700}.card p{color:#5b5a66;font-size:16px}
+.ico{width:48px;height:48px;border-radius:13px;background:#E6F3FA;display:grid;place-items:center}
+.ico svg{width:24px;height:24px;stroke:var(--bleu);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.prob{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.list{list-style:none;margin-top:8px}.list li{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--filet)}
+.list li b{font-family:var(--t);color:var(--nuit);font-size:19px;display:block}.list li span{color:#5b5a66;font-size:16px}
+.num{flex:none;font-family:var(--l);font-weight:700;color:var(--bleu);font-size:14px;padding-top:3px;width:30px}
+/* agents */
+.agent{position:relative;overflow:hidden}
+.agent .tag{font-family:var(--l);font-size:12px;font-weight:700;color:var(--sarcelle);letter-spacing:.06em;text-transform:uppercase}
+.agent ul{list-style:none;margin-top:14px}.agent li{font-size:15px;color:#4c4b57;padding:6px 0 6px 22px;position:relative}
+.agent li:before{content:"";position:absolute;left:0;top:13px;width:10px;height:10px;border-radius:3px;background:linear-gradient(135deg,var(--cyan),var(--bleu))}
+/* steps */
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:52px;position:relative}
+.steps:before{content:"";position:absolute;left:6%;right:6%;top:27px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--bleu))}
+.step{padding:0 14px;text-align:left;position:relative}
+.step .n{width:56px;height:56px;border-radius:50%;background:var(--nuit);color:#fff;font-family:var(--l);font-weight:700;display:grid;place-items:center;font-size:18px;border:4px solid var(--fond);position:relative}
+.step h3{font-size:20px;margin:18px 0 6px}.step p{font-size:15.5px;color:#5b5a66}
+.step .d{display:inline-block;margin-top:10px;font-family:var(--l);font-size:12px;font-weight:700;color:var(--bleu);background:#E6F3FA;padding:4px 10px;border-radius:20px}
+/* partners */
+.dark{background:var(--nuit);color:#fff}.dark h2{color:#fff}.dark .sub{color:#c4c8e6}.dark .lab{color:var(--cyan)}
+.pt{background:#2b2f63;border:1px solid #3b4083;border-radius:20px;padding:34px}
+.pt .lg{height:58px;display:flex;align-items:center;margin-bottom:22px}.pt .lg img{height:100%;width:auto}
+.pt h3{color:#fff;font-size:24px;margin-bottom:10px}.pt p{color:#c4c8e6;font-size:16px}
+.facts{display:flex;gap:30px;margin-top:22px;flex-wrap:wrap}
+.facts div{border-left:3px solid var(--cyan);padding-left:14px}
+.facts b{font-family:var(--l);font-size:28px;color:#fff;display:block;line-height:1.1}
+.facts span{font-size:13px;color:#aeb3dc}
+.src{font-size:12px;color:#8a8fbf;margin-top:16px}
+/* faq */
+details{background:#fff;border:1px solid var(--filet);border-radius:14px;padding:20px 24px;margin-top:12px}
+summary{cursor:pointer;font-family:var(--t);font-weight:600;font-size:19px;color:var(--nuit);list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary:after{content:"+";font-family:var(--l);color:var(--bleu);font-size:24px;line-height:1}
+details[open] summary:after{content:"–"}
+details p{margin-top:12px;color:#5b5a66}
+.todo{background:#FFF4CC;color:#5a4800;padding:1px 7px;border-radius:5px;font-size:.9em;white-space:nowrap}
+/* form */
+.form{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px}
+.form label{font-family:var(--l);font-size:13px;font-weight:700;color:var(--nuit);display:block;margin-bottom:6px}
+.form input,.form select,.form textarea{width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1px solid #cfd5dd;border-radius:10px;background:#fff;color:var(--encre)}
+.form input:focus,.form select:focus,.form textarea:focus{outline:2px solid var(--cyan);border-color:transparent}
+.form .full{grid-column:1/-1}
+.okmsg{display:none;background:#E5F7F2;border:1px solid #9fded0;color:#0e5b4f;border-radius:12px;padding:16px 18px;margin-top:16px}
+.cand{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+.cand .card{padding:34px}
+/* footer */
+footer{background:#191c3f;color:#a5aad4;padding:60px 0 30px;font-size:15px}
+.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}
+footer h4{font-family:var(--l);color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+footer a{display:block;text-decoration:none;padding:4px 0}footer a:hover{color:#fff}
+.flogos{display:flex;gap:18px;align-items:center;margin-bottom:16px}.flogos img{height:36px;width:auto}
+.soc{display:flex;gap:10px;margin-top:6px}.soc a{width:38px;height:38px;border-radius:10px;background:#262a58;display:grid;place-items:center;padding:0}
+.soc svg{width:18px;height:18px;fill:#fff}
+.legal{border-top:1px solid #2c3066;margin-top:40px;padding-top:20px;font-size:13px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:960px){.links{display:none}.hero .g,.prob,.cand,.g2{grid-template-columns:1fr}.g3,.g4{grid-template-columns:1fr 1fr}
+.steps{grid-template-columns:1fr 1fr;row-gap:40px}.steps:before{display:none}.fg{grid-template-columns:1fr 1fr}.hero{padding:60px 0 80px}}
+@media(max-width:600px){body{font-size:16px}.g3,.g4,.steps,.form,.fg{grid-template-columns:1fr}section{padding:68px 0}.nav .btn{display:none}.duo img{height:34px}.ag .st{display:none}.card{padding:24px}}
+</style>
+</head>
+<body>
+<div class="draft">Version de travail · contenus à valider par I&amp;P et Mstudio avant diffusion</div>
+<header><div class="w nav">
+  <a class="brand" href="#"><span class="dot">AI</span>Scale AI</a>
+  <nav class="links"><a href="#pourquoi">Pourquoi</a><a href="#agents">Les agents</a><a href="#parcours">Le parcours</a><a href="#partenaires">Partenaires</a><a href="#faq">Questions</a></nav>
+  <a class="btn" href="#candidater">Candidater</a>
+</div></header>
+
+<div class="hero"><div class="w g">
+  <div>
+    <div class="duo"><img src="assets/logo-ip-blanc.png" alt="Investisseurs &amp; Partenaires"><span class="x">×</span><img src="assets/logo-mstudio-blanc.png" alt="Mstudio"></div>
+    <div class="lab" style="color:var(--cyan)">Programme I&amp;P × Mstudio</div>
+    <h1 style="margin-top:14px">Des agents IA au travail dans <em>vos PME.</em></h1>
+    <p>Scale AI installe, dans les entreprises accompagnées par les fonds I&amp;P, des agents IA qui prennent en charge le travail répétitif de la finance, du commercial, des RH et des opérations. Vos équipes gardent les décisions ; les agents font le reste.</p>
+    <div class="cta"><a class="btn" href="#candidater">Candidater au programme</a><a class="btn g" href="#agents">Voir ce que font les agents</a></div>
+  </div>
+  <div class="console" aria-label="Illustration : le travail d'une journée chez une PME">
+    <div class="top"><b>Une journée chez une PME du portefeuille</b><span class="live"><i></i>en service</span></div>
+    <div class="ag"><div class="ic" style="background:var(--bleu)"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15l3-4 3 2 5-6"/></svg></div><div><h4>Agent finance</h4><p>Relances clients du mois préparées, à valider par la gérante.</p></div><span class="st wt">à valider</span></div>
+    <div class="ag"><div class="ic" style="background:var(--sarcelle)"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h11"/></svg></div><div><h4>Agent commercial</h4><p>Liste de prospects qualifiés et premier message rédigé.</p></div><span class="st ok">prêt</span></div>
+    <div class="ag"><div class="ic" style="background:var(--cyan)"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div><div><h4>Agent RH</h4><p>Fiches de poste et tri des candidatures reçues.</p></div><span class="st ok">prêt</span></div>
+    <div class="ag"><div class="ic" style="background:#5b61b5"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2"/></svg></div><div><h4>Agent opérations</h4><p>Point des stocks et des commandes fournisseurs en retard.</p></div><span class="st wt">à valider</span></div>
+    <div class="note">Illustration du fonctionnement, pas une entreprise réelle.</div>
+  </div>
+</div></div>
+
+<section id="pourquoi"><div class="w prob">
+  <div>
+    <div class="lab">Pourquoi Scale AI</div>
+    <h2>Une PME qui grandit croule d'abord sous le travail administratif.</h2>
+    <p class="sub">Les dirigeants de PME africaines portent tout : la vente, la trésorerie, l'équipe, les reportings aux investisseurs. L'IA peut leur rendre ce temps, à condition d'être installée dans les vrais outils de l'entreprise, avec des règles claires.</p>
+  </div>
+  <ul class="list">
+    <li><span class="num">01</span><div><b>Moins de temps perdu</b><span>Rapprochements, relances, comptes rendus, tableaux de suivi : les tâches qui reviennent chaque semaine passent aux agents.</span></div></li>
+    <li><span class="num">02</span><div><b>Des décisions mieux préparées</b><span>Chaque agent remet un document prêt à lire : chiffres sourcés, points d'attention, options.</span></div></li>
+    <li><span class="num">03</span><div><b>L'humain garde la main</b><span>Rien ne part, ne se paie ni ne se signe sans l'accord d'une personne de l'entreprise.</span></div></li>
+    <li><span class="num">04</span><div><b>Pensé pour l'Afrique francophone</b><span>Français, cadre OHADA et UEMOA, outils et usages des PME de la région.</span></div></li>
+  </ul>
+</div></section>
+
+<section id="agents" class="alt"><div class="w">
+  <div class="lab">Les agents</div>
+  <h2>Un collègue IA par métier.</h2>
+  <p class="sub">Chaque agent tient un poste, connaît l'entreprise et produit des livrables complets. La PME choisit ceux dont elle a besoin.</p>
+  <div class="grid g3">
+    <div class="card agent"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15l3-4 3 2 5-6"/></svg></div><h3>Finance</h3><span class="tag">Trésorerie · reporting</span><ul><li>Prévisions de trésorerie</li><li>Relances des impayés</li><li>Reporting mensuel pour le fonds</li></ul></div>
+    <div class="card agent"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h11"/></svg></div><h3>Commercial</h3><span class="tag">Prospection · ventes</span><ul><li>Recherche et qualification de prospects</li><li>Propositions commerciales</li><li>Suivi du pipeline</li></ul></div>
+    <div class="card agent"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div><h3>Ressources humaines</h3><span class="tag">Recrutement · paie</span><ul><li>Fiches de poste et annonces</li><li>Tri des candidatures</li><li>Préparation de la paie</li></ul></div>
+    <div class="card agent"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2"/></svg></div><h3>Opérations</h3><span class="tag">Stocks · fournisseurs</span><ul><li>Suivi des stocks et commandes</li><li>Procédures écrites</li><li>Tableaux de bord d'activité</li></ul></div>
+    <div class="card agent"><div class="ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Relation client</h3><span class="tag">Support · fidélisation</span><ul><li>Réponses aux demandes clients</li><li>Suivi des réclamations</li><li>Base de réponses de l'entreprise</li></ul></div>
+    <div class="card agent"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15.6 7.1 18.2 8 12.7 4 8.8 9.5 8z"/></svg></div><h3>Marketing et direction</h3><span class="tag">Contenus · pilotage</span><ul><li>Contenus et réseaux sociaux</li><li>Notes de synthèse pour la direction</li><li>Préparation des comités</li></ul></div>
+  </div>
+  <p style="margin-top:22px;font-size:14px;color:var(--ardoise)">Les agents s'appuient sur la plateforme Yelema, développée par Mstudio. Liste des agents ouverts dans le programme <span class="todo">⟦à confirmer⟧</span></p>
+</div></section>
+
+<section id="parcours"><div class="w">
+  <div class="lab">Le parcours</div>
+  <h2>De l'audit à des agents en service.</h2>
+  <p class="sub">Un parcours court, mené avec l'équipe dirigeante de chaque PME et l'équipe d'investissement I&amp;P qui la suit.</p>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><h3>Diagnostic</h3><p>On repère, avec la direction, les tâches qui coûtent le plus de temps et celles que l'IA peut prendre.</p><span class="d">Durée ⟦à préciser⟧</span></div>
+    <div class="step"><div class="n">2</div><h3>Choix des agents</h3><p>Les agents utiles sont retenus, avec ce que chacun peut faire seul et ce qui reste validé par l'équipe.</p><span class="d">Durée ⟦à préciser⟧</span></div>
+    <div class="step"><div class="n">3</div><h3>Déploiement</h3><p>Branchement aux outils de la PME (messagerie, documents, tableurs) et formation des équipes.</p><span class="d">Durée ⟦à préciser⟧</span></div>
+    <div class="step"><div class="n">4</div><h3>Mesure</h3><p>Temps gagné, livrables produits, adoption par les équipes : un point régulier avec la PME et le fonds.</p><span class="d">Durée ⟦à préciser⟧</span></div>
+  </div>
+</div></section>
+
+<section id="partenaires" class="dark"><div class="w">
+  <div class="lab">Les partenaires</div>
+  <h2>Un investisseur d'impact et un studio IA, réunis.</h2>
+  <p class="sub">I&amp;P apporte son portefeuille de PME et sa connaissance de leurs besoins ; Mstudio apporte ses agents IA et sa méthode de déploiement.</p>
+  <div class="grid g2">
+    <div class="pt"><div class="lg"><img src="assets/logo-ip-blanc.png" alt="Investisseurs &amp; Partenaires"></div><h3>Investisseurs &amp; Partenaires</h3>
+      <p>Pionnier de l'investissement d'impact en Afrique, I&amp;P finance, accompagne et fait connaître les entrepreneurs et PME qui transforment le continent.</p>
+      <div class="facts"><div><b>24</b><span>années d'activité</span></div><div><b>350</b><span>entreprises partenaires</span></div><div><b>480 M€</b><span>levés</span></div></div>
+      <p class="src">Source : ietp.com, relevé le 22/10/2026.</p></div>
+    <div class="pt"><div class="lg"><img src="assets/logo-mstudio-blanc.png" alt="Mstudio"></div><h3>Mstudio</h3>
+      <p>Startup studio basé à Abidjan, Mstudio lance des startups tech en Afrique francophone et a construit Yelema, sa plateforme d'agents IA, qu'il utilise d'abord pour ses propres équipes.</p>
+      <div class="facts"><div><b>2022</b><span>création, Abidjan</span></div><div><b>80</b><span>agents IA opérationnels</span></div></div>
+      <p class="src">Source : Digital Mag CI, 25/02/2026 · chiffres à reconfirmer par Mstudio.</p></div>
+  </div>
+</div></section>
+
+<section id="faq" class="alt"><div class="w" style="max-width:880px">
+  <div class="lab">Questions fréquentes</div>
+  <h2>Ce que les dirigeants nous demandent.</h2>
+  <details><summary>Quelles entreprises peuvent participer ?</summary><p>Les PME accompagnées par les fonds I&amp;P et leurs équipes d'investissement. Critères précis d'éligibilité <span class="todo">⟦à renseigner⟧</span></p></details>
+  <details><summary>Combien coûte le programme pour la PME ?</summary><p>Modalités de prise en charge <span class="todo">⟦à renseigner⟧</span></p></details>
+  <details><summary>Faut-il une équipe technique ?</summary><p>Non. Les agents se branchent aux outils que l'entreprise utilise déjà et se pilotent en français, par écrit ou à la voix.</p></details>
+  <details><summary>Que deviennent les données de l'entreprise ?</summary><p>Chaque agent ne lit que ce que l'entreprise lui ouvre, et rien ne sort sans l'accord d'une personne habilitée. Engagements contractuels détaillés <span class="todo">⟦à renseigner⟧</span></p></details>
+  <details><summary>Les agents remplacent-ils des salariés ?</summary><p>Ils prennent en charge le travail répétitif pour que les équipes se concentrent sur les clients, la qualité et les décisions. Les validations restent humaines.</p></details>
+</div></section>
+
+<section id="candidater"><div class="w cand">
+  <div>
+    <div class="lab">Candidater</div>
+    <h2>Votre PME est accompagnée par I&amp;P ?</h2>
+    <p class="sub">Laissez-nous vos coordonnées : l'équipe Scale AI vous recontacte pour un premier diagnostic.</p>
+    <p style="margin-top:22px;color:#5b5a66">Prochaine cohorte : <span class="todo">⟦date à renseigner⟧</span><br>Contact du programme : <span class="todo">⟦adresse à renseigner⟧</span></p>
+  </div>
+  <div class="card">
+    <form class="form" id="f" onsubmit="event.preventDefault();this.style.display='none';document.getElementById('okm').style.display='block'">
+      <div><label for="n">Nom et prénom</label><input id="n" required autocomplete="name"></div>
+      <div><label for="e">Entreprise</label><input id="e" required></div>
+      <div><label for="m">E-mail</label><input id="m" type="email" required autocomplete="email"></div>
+      <div><label for="t">Téléphone</label><input id="t" type="tel" autocomplete="tel"></div>
+      <div class="full"><label for="p">Pays</label><select id="p"><option>Côte d'Ivoire</option><option>Sénégal</option><option>Burkina Faso</option><option>Mali</option><option>Niger</option><option>Cameroun</option><option>Madagascar</option><option>Autre</option></select></div>
+      <div class="full"><label for="b">Les tâches qui vous prennent le plus de temps</label><textarea id="b" rows="3"></textarea></div>
+      <div class="full"><button class="btn" type="submit">Envoyer ma candidature</button></div>
+    </form>
+    <div class="okmsg" id="okm"><b>Merci, votre demande est bien enregistrée.</b><br>L'équipe Scale AI revient vers vous rapidement.</div>
+  </div>
+</div></section>
+
+<footer><div class="w">
+  <div class="fg">
+    <div><div class="flogos"><img src="assets/logo-ip-blanc.png" alt="I&amp;P"><img src="assets/logo-mstudio-blanc.png" alt="Mstudio"></div>
+      <p>Scale AI, le programme d'I&amp;P et de Mstudio pour déployer des agents IA dans les PME africaines.</p></div>
+    <div><h4>Programme</h4><a href="#pourquoi">Pourquoi Scale AI</a><a href="#agents">Les agents</a><a href="#parcours">Le parcours</a><a href="#candidater">Candidater</a></div>
+    <div><h4>Partenaires</h4><a href="https://www.ietp.com/fr" target="_blank" rel="noopener">ietp.com</a><a href="https://www.mstudio.vc/" target="_blank" rel="noopener">mstudio.vc</a><a>Mstudio · Ivoire Trade Center, Cocody, Abidjan</a></div>
+  </div>
+  <div class="legal"><span>© 2026 I&amp;P × Mstudio · Mentions légales <span class="todo">⟦à renseigner⟧</span></span><span>Formulaire de démonstration : non relié à une boîte de réception.</span></div>
+</div></footer>
+</body></html>
