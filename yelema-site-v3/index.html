@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="fr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Yelema, une équipe d'Experts IA pour chaque fonction</title>
+<meta name="description" content="Quatre Experts IA par fonction, qui se passent le relais dans vos outils. Djénéba les orchestre, et rien ne part sans votre accord.">
+<link rel="icon" href="assets/img/logos/yelema-tuile.png">
+<meta name="theme-color" content="#1C0F3D">
+<link rel="preload" href="assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/funnel-display-var.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.classList.add("js")</script>
+<style>@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:300 700;font-display:swap;src:url(assets/fonts/space-grotesk-var.woff2) format('woff2')}
+@font-face{font-family:'Funnel Display';font-style:normal;font-weight:300 800;font-display:swap;src:url(assets/fonts/funnel-display-var.woff2) format('woff2')}
+:root{--indigo:#301667;--deep:#1C0F3D;--carte:#3D227E;--bord:#4E3096;--v700:#4A299C;--violet:#8D68FA;--lav:#C5C4FF;--lavp:#E0E1FF;--lil:#F3EFFE;
+--bleu:#2E4EC4;--coral:#E4765A;--coralp:#FBE7E2;--ink:#241A3A;--muted:#6B6580;--grey2:#938DA8;--line:#ECE8FA;--vert:#22A45D;
+--h:'Space Grotesk',sans-serif;--b:'Funnel Display',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--b);color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.5}
+h1,h2,h3,h4,b{font-family:var(--h)}
+a{color:inherit}
+img{max-width:100%}
+.ic{width:18px;height:18px;flex:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.pad{padding:112px 0}
+.soft{background:var(--lil)}
+.dark{background:var(--deep);color:#fff}
+.eyebrow{font:700 13px var(--h);letter-spacing:.18em;text-transform:uppercase;color:var(--violet)}
+.e-lav{color:var(--lav)}.e-gris{color:var(--grey2)}
+.acc{color:var(--coral)}.acc-v{color:var(--violet)}
+.mini{font:700 11.5px var(--h);letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin-bottom:12px}
+.m-lav{color:var(--lav)}.m-coral{color:var(--coral)}
+.av{display:block;border-radius:50%;background-size:cover;background-position:center top;background-color:var(--lavp);flex:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:54px;padding:0 28px;border-radius:999px;font:600 16px var(--h);text-decoration:none;white-space:nowrap;transition:transform .2s,box-shadow .2s;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn-p{background:linear-gradient(135deg,var(--bleu),var(--violet));color:#fff;box-shadow:0 8px 24px rgba(141,104,250,.35)}
+.btn-w{background:#fff;color:var(--indigo)}
+.btn-o{color:#fff;border:1px solid rgba(255,255,255,.3);background:transparent}
+.btn-s{height:44px;padding:0 20px;font-size:15px}
+.ctas{display:flex;gap:14px;flex-wrap:wrap}
+.sh{max-width:780px;margin:0 auto 56px;text-align:center}
+.sh h2{font-size:44px;line-height:1.08;letter-spacing:-.025em;color:var(--indigo);margin:14px 0 16px}
+.sh p{font-size:18px;color:var(--muted)}
+.sh-d h2{color:#fff}.sh-d p{color:var(--lav)}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .25s,box-shadow .25s}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:76px}
+.nav-logo img{height:30px;display:block}
+.nav .lg-c{display:none}
+.nav nav{display:flex;gap:30px;font-size:15px;color:#E9E4FF}
+.nav nav a{text-decoration:none}
+.nav nav a:hover{color:#fff}
+.nav.solide{background:rgba(255,255,255,.94);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.nav.solide .lg-b{display:none}.nav.solide .lg-c{display:block}
+.nav.solide nav{color:var(--ink)}.nav.solide nav a:hover{color:var(--violet)}
+.nav.solide .btn-w{background:linear-gradient(135deg,var(--bleu),var(--violet));color:#fff}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:radial-gradient(900px 520px at 50% 0%,#4A299C 0%,var(--indigo) 45%,var(--deep) 100%);color:#fff;padding:150px 0 72px}
+.fleur{position:absolute;right:-250px;top:170px;width:440px;opacity:.9;pointer-events:none}
+.fleur2{position:absolute;left:-200px;bottom:-140px;width:420px;opacity:.35;pointer-events:none;transform:rotate(30deg)}
+.hero-in{position:relative;z-index:2;text-align:center}
+.hero h1{font-size:68px;line-height:1.02;letter-spacing:-.03em;margin:18px auto 22px;max-width:920px}
+.hero .lede{font-size:19px;color:var(--lav);max-width:620px;margin:0 auto}
+.hero .ctas{justify-content:center;margin-top:34px}
+.mur{margin:64px auto 0;max-width:1060px;background:var(--carte);border:1px solid var(--bord);border-radius:30px;padding:26px 34px 30px;text-align:left}
+.mur-h{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.mur-t{margin-top:16px;color:var(--lav);font-size:15.5px}
+.dj{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border-radius:999px;padding:6px 16px 6px 6px;font-size:14px;color:var(--lav)}
+.dj b{color:#fff;font-size:14.5px}
+.rang{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
+.rang:before{content:"";position:absolute;left:12%;right:12%;top:62px;height:2px;background:repeating-linear-gradient(90deg,var(--violet) 0 6px,transparent 6px 12px)}
+.p{position:relative;text-align:center;animation:entre .45s ease both}
+.p:nth-child(2){animation-delay:.08s}.p:nth-child(3){animation-delay:.16s}.p:nth-child(4){animation-delay:.24s}
+@keyframes entre{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.p .av{margin:0 auto;border:4px solid var(--carte);box-shadow:0 0 0 2px var(--violet)}
+.p .n{position:absolute;top:0;left:calc(50% + 38px);width:26px;height:26px;border-radius:50%;background:var(--coral);font:700 13px var(--h);display:grid;place-items:center;color:#fff}
+.p b{display:block;font-size:17px;margin-top:12px}
+.p em{font-style:normal;font-size:14px;color:var(--lav)}
+.livr{margin-top:24px;display:flex;gap:10px;align-items:center;justify-content:center;background:var(--lavp);color:var(--indigo);border-radius:16px;padding:14px 18px;font:600 15.5px var(--h);text-align:center}
+
+/* sélecteur */
+.sel{position:relative;display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 44px 0 16px;border-radius:999px;background:#fff;color:var(--indigo);border:1px solid #D9D0F7;cursor:pointer;min-width:340px}
+.sel>.ic:first-child{color:var(--violet)}
+.sel-l{position:absolute;left:46px;top:6px;font:700 9.5px var(--h);letter-spacing:.14em;text-transform:uppercase;color:var(--grey2);pointer-events:none}
+.sel select{appearance:none;-webkit-appearance:none;border:0;background:transparent;font:700 16px var(--h);color:inherit;padding-top:12px;width:100%;cursor:pointer;outline:none}
+.sel-c{position:absolute;right:16px;pointer-events:none;color:var(--violet)}
+.sel-d{background:#fff;border-color:#fff}
+
+/* logos */
+.logos-b{padding:34px 0;border-bottom:1px solid var(--line)}
+.logos-b .eyebrow{text-align:center;margin-bottom:20px;font-size:12px}
+.logos{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
+.logos img{height:34px;width:auto;object-fit:contain}
+
+/* problème */
+.pb{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.pb-c{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px}
+.pb-c .ic{width:26px;height:26px}
+.pb-c b{display:block;font-size:18px;color:var(--indigo);margin:18px 0 8px;line-height:1.25}
+.pb-c p{color:var(--muted);font-size:15px}
+.pb-d{background:var(--indigo);border-color:var(--indigo)}
+.pb-d b{color:#fff}.pb-d p{color:var(--lav)}
+
+/* équipes */
+.eq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.eq-c{display:flex;flex-direction:column;gap:18px;text-align:left;background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;cursor:pointer;font:inherit;color:inherit;transition:transform .2s,box-shadow .2s,border-color .2s}
+.eq-c:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(48,22,103,.09);border-color:#E3DBFB}
+.eq-h{display:flex;gap:12px;align-items:flex-start;min-height:52px}
+.chip{width:44px;height:44px;border-radius:14px;background:var(--lavp);display:grid;place-items:center;flex:none}
+.eq-h b{display:block;font-size:18px;color:var(--indigo);line-height:1.2}
+.eq-h em{display:block;font-style:normal;font-size:14px;color:var(--muted);margin-top:2px}
+.eq-g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.eq-p{display:flex;flex-direction:column;align-items:center;text-align:center;gap:2px}
+.eq-p b{font-size:14px;color:var(--indigo);margin-top:6px}
+.eq-p em{font-style:normal;font-size:11.5px;line-height:1.25;color:var(--muted)}
+.eq-l{display:flex;gap:8px;align-items:flex-start;font-size:14.5px;color:var(--indigo);background:var(--lil);border-radius:14px;padding:12px 14px}
+.eq-l .ic{margin-top:2px}
+.eq-go{margin-top:auto;display:flex;align-items:center;gap:8px;font:700 14.5px var(--h);color:var(--violet)}
+.eq-go .ic{width:16px;height:16px}
+
+/* action */
+.ac-top{display:flex;justify-content:center;margin:-24px 0 36px}
+.ac{display:grid;grid-template-columns:1.25fr 1fr;gap:28px;align-items:start}
+.ac-cycle{background:var(--lil);border-radius:28px;padding:30px}
+.ac-t{font:700 22px var(--h);color:var(--indigo);margin-bottom:20px}
+.cy{list-style:none;position:relative}
+.cy:before{content:"";position:absolute;left:19px;top:20px;bottom:20px;width:2px;background:repeating-linear-gradient(var(--violet) 0 5px,transparent 5px 10px)}
+.cy li{position:relative;display:flex;gap:14px;align-items:center;padding:8px 0}
+.cy .av{position:relative;z-index:1;border:3px solid var(--lil)}
+.cy .pt{position:relative;z-index:1;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;flex:none;background:#fff;border:2px solid var(--coral)}
+.cy .pt .ic{width:16px;height:16px;color:var(--coral)}
+.cy small{display:block;font:700 11px var(--h);letter-spacing:.12em;text-transform:uppercase;color:var(--violet)}
+.cy span{font-size:15.5px;color:var(--ink)}
+.cy .dj-l small{color:var(--coral)}
+.cy .ok{background:#fff;border:1px solid #E3DBFB;border-radius:16px;padding:12px 14px;flex:1}
+.cy .ok b{display:block;font-size:15px;color:var(--indigo);margin:2px 0 8px}
+.cy .ok i{font-style:normal;display:inline-block;font:600 13px var(--h);padding:6px 12px;border-radius:999px;margin-right:6px}
+.cy .ok .v{background:var(--violet);color:#fff}.cy .ok .m{background:var(--lavp);color:var(--indigo)}
+.cy .fin{background:var(--indigo);color:#fff;border-radius:16px;padding:12px 16px;flex:1}
+.cy .fin small{color:var(--lav)}.cy .fin span{color:#fff;font-weight:500}
+.ac-side{display:grid;gap:16px}
+.ac-b{border:1px solid var(--line);border-radius:22px;padding:24px}
+.ticks{list-style:none;display:grid;gap:10px}
+.ticks li{display:flex;gap:10px;align-items:flex-start;font-size:15.5px}
+.ticks .ic{color:var(--vert);margin-top:3px}
+.ac-pour p:last-child{color:var(--muted)}
+
+/* chatgpt + mémoire */
+.cmp{max-width:980px;margin:0 auto;border:1px solid var(--bord);border-radius:26px;overflow:hidden}
+.cmp-hd,.cmp-r{display:grid;grid-template-columns:1fr 1fr}
+.cmp-hd span{padding:18px 26px;font:700 16px var(--h);display:flex;gap:10px;align-items:center}
+.cmp-hd span:first-child{color:var(--grey2)}
+.cmp-hd span:last-child{background:var(--carte)}
+.cmp-hd img{width:26px;height:26px;border-radius:8px}
+.cmp-r span{padding:16px 26px;display:flex;gap:12px;align-items:flex-start;border-top:1px solid var(--bord);font-size:15.5px}
+.cmp-r .ic{margin-top:3px}
+.cmp-n{color:var(--grey2)}
+.cmp-y{background:var(--carte);color:#fff}
+.mem{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center;max-width:980px;margin:72px auto 0}
+.mem h3{font-size:30px;line-height:1.15;letter-spacing:-.02em;margin:12px 0}
+.mem-txt p:last-child{color:var(--lav)}
+.mem-g{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mem-c{display:flex;gap:12px;align-items:flex-start;background:var(--carte);border:1px solid var(--bord);border-radius:18px;padding:14px}
+.mem-c b{display:block;font-size:13.5px;color:var(--lav)}
+.mem-c em{font-style:normal;font-size:14px}
+.mem-c:nth-child(odd) b{color:var(--coral)}
+
+/* démarrage */
+.dm{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.dm:before{content:"";position:absolute;left:12%;right:12%;top:62px;height:2px;background:repeating-linear-gradient(90deg,var(--violet) 0 6px,transparent 6px 12px)}
+.dm-s{display:flex;flex-direction:column;align-items:center;text-align:center}
+.dm-q{font:700 12.5px var(--h);color:var(--violet);background:var(--lil);border-radius:999px;padding:6px 12px}
+.dm-n{position:relative;z-index:1;width:40px;height:40px;border-radius:50%;background:var(--indigo);color:#fff;display:grid;place-items:center;font:700 16px var(--h);margin:12px 0 18px;box-shadow:0 0 0 6px #fff}
+.dm-s:first-child .dm-n{background:var(--coral)}
+.dm-c{border:1px solid var(--line);border-radius:22px;padding:24px 20px;flex:1;width:100%}
+.dm-c .ic{width:24px;height:24px}
+.dm-c b{display:block;font-size:17px;color:var(--indigo);margin:14px 0 8px;line-height:1.25}
+.dm-c p{font-size:14.5px;color:var(--muted)}
+.outils{margin-top:56px;text-align:center}
+.outils p{color:var(--muted);margin-bottom:18px}
+.outils-l{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.outils-l img{width:48px;height:48px;object-fit:contain;padding:10px;border:1px solid var(--line);border-radius:14px;background:#fff}
+
+/* offres */
+.ofs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.of{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:26px;padding:34px 28px 28px}
+.of-n{position:absolute;top:-16px;left:28px;width:34px;height:34px;border-radius:50%;background:var(--violet);color:#fff;display:grid;place-items:center;font:700 15px var(--h)}
+.of-tag{font:700 12px var(--h);letter-spacing:.16em;text-transform:uppercase;color:var(--violet)}
+.of h3{font-size:24px;color:var(--indigo);margin:6px 0 6px}
+.of-pour{color:var(--muted);font-size:15px;min-height:46px}
+.of-prix{font:700 34px var(--h);color:var(--indigo);margin-top:22px;letter-spacing:-.02em}
+.of-prix span{font:400 16px var(--b);color:var(--muted)}
+.of-sous{font-size:14px;color:var(--muted);padding-bottom:20px;border-bottom:1px solid var(--line)}
+.of ul{list-style:none;display:grid;gap:12px;margin:22px 0 28px}
+.of li{display:flex;gap:10px;font-size:15px}
+.of li .ic{color:var(--violet);margin-top:3px}
+.of .btn{margin-top:auto}
+.of-d{background:var(--indigo);border-color:var(--indigo);color:#fff;box-shadow:0 30px 60px rgba(48,22,103,.25)}
+.of-d .of-n{background:var(--coral)}
+.of-d .of-tag{color:var(--lav)}.of-d h3,.of-d .of-prix{color:#fff}
+.of-d .of-pour,.of-d .of-sous,.of-d .of-prix span{color:var(--lav)}
+.of-d .of-sous{border-color:var(--bord)}.of-d li .ic{color:var(--lav)}
+.ofs-inc{display:flex;gap:12px;align-items:center;justify-content:center;margin-top:30px;font-size:15.5px;color:var(--ink)}
+.ofs-inc .ic{width:22px;height:22px}
+
+/* sécurité */
+.sec{display:grid;grid-template-columns:1fr 1.3fr;gap:20px}
+.sec-c{border-radius:26px;padding:30px}
+.sec-c h3{font-size:22px;line-height:1.2;margin-bottom:18px}
+.sec-risk{border:1px dashed #6B4FB0}
+.sec-chat{background:var(--carte);border:1px solid var(--bord)}
+.cross{list-style:none;display:grid;gap:12px}
+.cross li{display:flex;gap:10px;color:var(--lav);font-size:15.5px}
+.chat{display:grid;gap:10px;margin-bottom:20px}
+.chat-q{justify-self:end;max-width:78%;background:var(--violet);color:#fff;border-radius:18px 18px 4px 18px;padding:12px 16px;font-size:14.5px}
+.chat-r{display:flex;gap:10px;align-items:flex-start;max-width:88%;background:#fff;color:var(--ink);border-radius:18px 18px 18px 4px;padding:12px 16px;font-size:14.5px}
+.chat-r img{width:24px;height:24px;border-radius:7px}
+.t-lav li{color:#fff}
+.niv{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+.niv-c{border:1px solid var(--bord);border-radius:22px;padding:24px 28px}
+.niv-t{display:inline-block;font:700 12px var(--h);background:var(--v700);color:#fff;border-radius:999px;padding:5px 12px}
+.niv-c b{display:block;font-size:18px;margin:14px 0 6px}
+.niv-c p{color:var(--lav);font-size:15px}
+.garanties{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.garanties span{display:flex;gap:8px;align-items:center;font:500 14px var(--h);color:var(--lav);border:1px solid var(--bord);border-radius:999px;padding:9px 16px}
+
+/* témoignages */
+.tm{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.tm-c{position:relative;border:1px solid var(--line);border-radius:26px;padding:34px}
+.tm-q{width:34px;height:34px}
+.tm-c blockquote{font-size:18px;line-height:1.55;color:var(--ink);margin:16px 0 26px}
+.tm-c figcaption{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding-top:20px;border-top:1px solid var(--line)}
+.tm-c figcaption>img{height:36px;width:auto}
+.tm-c figcaption b{display:block;font-size:15.5px;color:var(--indigo)}
+.tm-c figcaption em{font-style:normal;font-size:14px;color:var(--muted)}
+.tm-ex{margin-left:auto;display:flex;align-items:center;gap:8px;font:600 13.5px var(--h);color:var(--violet);background:var(--lil);border-radius:999px;padding:4px 14px 4px 4px}
+
+/* faq + fin */
+.fqs{max-width:860px;margin:0 auto;display:grid;gap:12px}
+.fq{background:#fff;border:1px solid var(--line);border-radius:18px}
+.fq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:20px 24px;font:600 17px var(--h);color:var(--indigo)}
+.fq summary::-webkit-details-marker{display:none}
+.fq-c{color:var(--violet);transition:transform .2s}
+.fq[open] .fq-c{transform:rotate(180deg)}
+.fq p{padding:0 24px 22px;color:var(--muted)}
+.cta{position:relative;overflow:hidden;text-align:center;border-radius:32px;padding:64px 40px;color:#fff;background:radial-gradient(700px 400px at 50% 0%,#4A299C,var(--indigo) 60%,var(--deep))}
+.cta-f{position:absolute;right:-120px;bottom:-140px;width:360px;opacity:.9;pointer-events:none}
+.cta>*:not(.cta-f){position:relative}
+.cta-av{display:flex;justify-content:center;margin-bottom:26px}
+.cta-av .av{border:3px solid var(--indigo);margin-left:-12px}
+.cta-av .av:first-child{margin-left:0}
+.cta h2{font-size:42px;line-height:1.1;letter-spacing:-.025em;max-width:760px;margin:0 auto 16px}
+.cta p{color:var(--lav);font-size:18px;max-width:620px;margin:0 auto 30px}
+.cta .ctas{justify-content:center}
+.ft{background:var(--deep);color:var(--lav);padding:64px 0 28px;font-size:15px}
+.ft-in{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.ft-lg{height:30px;margin-bottom:16px}
+.ft-a{font-size:13.5px;color:var(--grey2);margin-top:10px}
+.ft h4{font:700 12px var(--h);letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:14px}
+.ft a{display:block;text-decoration:none;margin-bottom:9px}
+.ft a:hover{color:#fff}
+.ft-b{border-top:1px solid var(--bord);margin-top:40px;padding-top:22px;font-size:13.5px;color:var(--grey2)}
+
+@media(max-width:1000px){
+ .pb{grid-template-columns:1fr 1fr}.eq-grid{grid-template-columns:1fr 1fr}.ofs{grid-template-columns:1fr}.ofs{gap:30px}
+ .ac{grid-template-columns:1fr}.sec,.niv,.tm,.mem{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+ .wrap{padding:0 18px}.pad{padding:76px 0}
+ .nav nav{display:none}
+ .fleur,.fleur2,.cta-f{display:none}
+ .hero{padding:118px 0 56px}.hero h1{font-size:40px}.hero .lede{font-size:17px}
+ .ctas .btn{width:100%}
+ .mur{padding:20px;margin-top:44px}.mur-h{flex-direction:column;align-items:stretch}.dj{align-self:flex-start}
+ .sel{min-width:0;width:100%}
+ .rang{grid-template-columns:1fr 1fr;row-gap:24px}.rang:before{display:none}
+ .sh h2{font-size:32px}.sh p{font-size:16.5px}.sh{margin-bottom:40px}
+ .pb,.eq-grid{grid-template-columns:1fr}
+ .dm{grid-template-columns:1fr}.dm:before{display:none}
+ .cmp-hd,.cmp-r{grid-template-columns:1fr}.cmp-hd span:first-child{display:none}.cmp-r .cmp-n{display:none}
+ .mem-g{grid-template-columns:1fr}
+ .cta{padding:48px 22px}.cta h2{font-size:30px}
+ .ft-in{grid-template-columns:1fr}
+ .tm-ex{margin-left:0}
+ .logos{gap:26px}.logos img{height:28px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* ===== v3 : couleurs lisibles (contraste AA) ===== */
+:root{--violet-t:#6A45E0;--coral-t:#B5452C;--ease:cubic-bezier(.2,.7,.2,1)}
+.eyebrow{color:var(--violet-t)}
+.e-lav,.dark .eyebrow,.sh-d .eyebrow{color:var(--lav)}
+.e-gris{color:var(--muted)}
+.mini{color:var(--coral-t)}
+.dark .mini,.of-d .mini,.m-coral{color:var(--coral)}
+.m-lav{color:var(--lav)}
+.sel-l{color:var(--muted)}
+.cy small{color:var(--violet-t)}
+.cy .dj-l small{color:var(--coral-t)}
+.tm-ex{color:var(--violet-t)}
+.dm-q{color:var(--violet-t)}
+.btn-p,.nav.solide .btn-w{background:linear-gradient(135deg,var(--bleu),var(--violet-t))}
+.chat-q{background:var(--violet-t)}
+.cy .ok .v{background:var(--violet-t)}
+.nav.solide nav a:hover{color:var(--violet-t)}
+h1,h2,h3{text-wrap:balance}
+p{text-wrap:pretty}
+
+/* ===== clavier ===== */
+:focus-visible{outline:3px solid var(--violet-t);outline-offset:3px;border-radius:8px}
+.hero :focus-visible,.dark :focus-visible,.cta :focus-visible,.ft :focus-visible,.nav:not(.solide) :focus-visible,.of-d :focus-visible{outline-color:#fff}
+.sel:focus-within{box-shadow:0 0 0 3px var(--violet)}
+.sel select:focus-visible{outline:0}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:#fff;color:var(--indigo);font:700 15px var(--h);padding:12px 18px;border-radius:999px;text-decoration:none;transition:top .2s}
+.skip:focus{top:12px}
+
+/* ===== menu ===== */
+.burger{display:none;width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.12);cursor:pointer;position:relative;flex:none}
+.burger span{position:absolute;left:13px;right:13px;height:2px;border-radius:2px;background:#fff;transition:transform .25s var(--ease),opacity .2s}
+.burger span:nth-child(1){top:16px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:26px}
+.nav.solide .burger{background:var(--lil)}
+.nav.solide .burger span{background:var(--indigo)}
+.nav.open .burger span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.nav.open .burger span:nth-child(2){opacity:0}
+.nav.open .burger span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+.menu-cta{display:none}
+.nav nav a{position:relative}
+.nav nav a:not(.btn):after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;border-radius:2px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease)}
+.nav nav a:not(.btn):hover:after,.nav nav a.ici:after{transform:scaleX(1)}
+.nav-in{gap:16px}
+
+/* ===== hero ===== */
+.hero{padding:132px 0 88px}
+.hero-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,500px);gap:48px;align-items:center;text-align:left}
+.hero h1{font-size:clamp(40px,5.2vw,66px);margin:18px 0 22px;max-width:none}
+.hero .lede{margin:0;max-width:540px;font-size:19.5px;line-height:1.55}
+.hero .ctas{justify-content:flex-start;margin-top:36px;gap:12px}
+.hero .ctas .btn{padding:0 24px}
+.fleur{top:auto;bottom:-120px;right:-180px;width:420px;opacity:.45}
+.fleur2{left:-220px;top:90px;bottom:auto;opacity:.25}
+.mur{margin:0;max-width:none;padding:22px 22px 18px;border-radius:28px;background:linear-gradient(180deg,rgba(61,34,126,.96),rgba(43,23,92,.96));box-shadow:0 30px 80px rgba(10,4,30,.45),inset 0 1px 0 rgba(255,255,255,.08)}
+.mur-h{display:block}
+.mur-h .sel{width:100%;min-width:0}
+.mur-b{transition:opacity .35s var(--ease),transform .35s var(--ease)}
+.mur-b.sort{opacity:0;transform:translateY(6px)}
+.mur-t{margin:16px 2px 6px;font:500 15px var(--h);color:var(--lav)}
+.relai{list-style:none;position:relative;margin:6px 0 0}
+.relai:before{content:"";position:absolute;left:23px;top:28px;bottom:28px;width:2px;background:repeating-linear-gradient(rgba(197,196,255,.35) 0 5px,transparent 5px 10px)}
+.rl{position:relative;display:grid;grid-template-columns:48px 1fr auto;gap:14px;align-items:center;padding:9px 10px 9px 0;border-radius:16px;transition:background .35s var(--ease)}
+.rl .av{position:relative;z-index:1;width:48px;height:48px;border:3px solid #34196f;box-shadow:0 0 0 2px rgba(141,104,250,.5);transition:box-shadow .35s var(--ease)}
+.rl-n{display:block;font:700 15.5px var(--h);color:#fff}
+.rl-n em{font:500 13px var(--b);font-style:normal;color:var(--lav);margin-left:6px}
+.rl-a{display:block;font-size:14px;line-height:1.35;color:#D9D6FF;opacity:.55;transition:opacity .35s}
+.rl-s{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;border:1.5px solid rgba(197,196,255,.35);color:transparent;transition:all .3s var(--ease)}
+.rl-s .ic{width:14px;height:14px}
+.rl.on{background:rgba(255,255,255,.07)}
+.rl.on .av{box-shadow:0 0 0 2px var(--coral),0 0 0 8px rgba(228,118,90,.18)}
+.rl.on .rl-a,.rl.ok .rl-a{opacity:1}
+.rl.ok .rl-s{background:var(--vert);border-color:var(--vert);color:#fff}
+.accord{display:flex;align-items:center;gap:12px;margin-top:12px;padding:12px 14px;border-radius:16px;background:#fff;color:var(--indigo);opacity:.35;transform:scale(.985);transition:opacity .4s var(--ease),transform .4s var(--ease)}
+.accord-i{width:30px;height:30px;border-radius:50%;flex:none;display:grid;place-items:center;border:2px solid var(--coral);color:var(--coral-t)}
+.accord-i .ic{width:15px;height:15px}
+.accord small{display:block;font:700 10.5px var(--h);letter-spacing:.12em;text-transform:uppercase;color:var(--coral-t)}
+.accord b{display:block;font-size:15px;line-height:1.3}
+.accord>div{flex:1;min-width:0}
+.accord-b{display:flex;gap:6px;flex:none}
+.accord-b i{font:600 12.5px var(--h);font-style:normal;padding:6px 11px;border-radius:999px;background:var(--lavp);color:var(--indigo)}
+.accord-b i:first-child{background:var(--violet-t);color:#fff}
+.accord.on{opacity:1;transform:none;box-shadow:0 0 0 3px rgba(228,118,90,.45)}
+.mur .livr{justify-content:flex-start;text-align:left;margin-top:10px;background:rgba(224,225,255,.12);color:#fff;opacity:.35;transition:opacity .4s var(--ease),background .4s}
+.mur .livr small{display:block;font:700 10.5px var(--h);letter-spacing:.12em;text-transform:uppercase;color:var(--lav)}
+.mur .livr .ic{color:var(--vert);flex:none}
+.mur .livr.on{opacity:1;background:var(--lavp);color:var(--indigo)}
+.mur .livr.on small{color:var(--violet-t)}
+.mur-f{display:flex;justify-content:flex-end;margin-top:14px}
+.mur-f .dj{background:rgba(255,255,255,.08)}
+
+/* ===== apparitions ===== */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.cy li{animation:entre .45s var(--ease) both}
+.cy li:nth-child(2){animation-delay:.05s}.cy li:nth-child(3){animation-delay:.1s}.cy li:nth-child(4){animation-delay:.15s}
+.cy li:nth-child(5){animation-delay:.2s}.cy li:nth-child(6){animation-delay:.25s}.cy li:nth-child(7){animation-delay:.3s}
+.cy li:nth-child(8){animation-delay:.35s}.cy li:nth-child(9){animation-delay:.4s}
+.ac-side .ticks li{animation:entre .45s var(--ease) both}
+
+/* ===== survols ===== */
+.pb-c,.of,.tm-c,.dm-c,.mem-c,.niv-c{transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s}
+.pb-c:hover,.of:hover,.tm-c:hover,.dm-c:hover{transform:translateY(-3px);box-shadow:0 18px 44px rgba(48,22,103,.10)}
+.eq-c:focus-visible{outline-offset:4px}
+.eq-c .eq-go,.eq-go{transition:transform .25s var(--ease)}
+.eq-c:hover .eq-go{transform:translateX(4px)}
+.logos img{filter:grayscale(1);opacity:.7;transition:filter .3s,opacity .3s}
+.logos img:hover{filter:none;opacity:1}
+.btn{transition:transform .2s var(--ease),box-shadow .2s var(--ease),background .2s}
+.btn-o:hover{background:rgba(255,255,255,.08)}
+.btn-w:hover{box-shadow:0 10px 28px rgba(10,4,30,.25)}
+.fq summary{min-height:56px}
+.fq summary:hover{color:var(--violet-t)}
+.fq[open]{border-color:#DCD2FA;box-shadow:0 10px 30px rgba(48,22,103,.06)}
+
+/* ===== logos : proportions ===== */
+.nav-logo img,.ft-lg,.logos img,.outils-l img,.tm-c figcaption>img{width:auto}
+
+/* ===== rythme ===== */
+.pad{padding:120px 0}
+.sh{margin-bottom:60px}
+.sh h2{font-size:clamp(30px,3.6vw,46px)}
+
+@media(max-width:1100px){
+ .hero-in{grid-template-columns:1fr;gap:44px}
+ .hero .lede{max-width:640px}
+ .mur{max-width:620px}
+}
+@media(max-width:1000px){
+ .nav nav{display:none}
+ .burger{display:block}
+ .nav.open{background:rgba(255,255,255,.98)}
+ .nav.open .lg-b{display:none}.nav.open .lg-c{display:block}
+ .nav.open .burger{background:var(--lil)}.nav.open .burger span{background:var(--indigo)}
+ .nav.open nav{display:flex;flex-direction:column;gap:0;position:absolute;left:0;right:0;top:76px;background:#fff;padding:8px 18px 22px;box-shadow:0 20px 40px rgba(28,15,61,.18);color:var(--ink)}
+ .nav.open nav a:not(.btn){padding:15px 4px;font:600 17px var(--h);border-bottom:1px solid var(--line)}
+ .nav.open nav a:not(.btn):after{display:none}
+ .nav.open .menu-cta{display:flex;margin-top:18px}
+ .nav-logo{margin-right:auto}
+}
+@media(max-width:760px){
+ .pad{padding:80px 0}
+ .hero{padding:108px 0 60px}
+ .hero h1{font-size:38px;line-height:1.06}
+ .hero .lede{font-size:17px}
+ .fleur,.fleur2{display:none}
+ .mur{padding:16px 14px 14px;border-radius:24px}
+ .rl{grid-template-columns:42px 1fr 22px;gap:11px;padding:8px 6px 8px 0}
+ .rl .av{width:42px;height:42px}
+ .relai:before{left:20px}
+ .rl-n em{display:block;margin:0}
+ .rl-s{width:22px;height:22px}
+ .accord{flex-wrap:wrap}
+ .accord-b{width:100%;padding-left:42px}
+ .mur-f{justify-content:flex-start}
+}
+@media(max-width:420px){
+ .nav-cta{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+ .js .rv{opacity:1;transform:none}
+ .mur-b.sort{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#probleme">Aller au contenu</a>
+
+<header class="nav" id="nav"><div class="wrap nav-in">
+ <a href="#haut" class="nav-logo"><img width="359" height="104" class="lg-b" src="assets/img/logos/yelema-long-blanc.webp" alt="Yelema"><img width="359" height="104" class="lg-c" src="assets/img/logos/yelema-long.webp" alt=""></a>
+ <nav id="menu" aria-label="Navigation principale"><a href="#equipes">Les équipes</a><a href="#action">Comment ça marche</a><a href="#offres">Offres</a><a href="#securite">Sécurité</a><a href="#faq">Questions</a><a class="btn btn-p menu-cta" href="#contact">Choisir mon équipe</a></nav>
+ <a class="btn btn-w btn-s nav-cta" href="#contact">Choisir mon équipe</a><button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+</div></header>
+<main id="contenu"><section class="hero" id="haut">
+ <img class="fleur" aria-hidden="true" src="assets/img/motifs/pattern-3.svg" alt=""><img class="fleur2" aria-hidden="true" src="assets/img/motifs/pattern-2-violet.svg" alt="">
+ <div class="wrap hero-in">
+  <div class="hero-txt">
+   <p class="eyebrow e-lav">Votre entreprise, décuplée par l'IA</p>
+   <h1>Une équipe d'<span class="acc">Experts IA</span> pour chaque fonction.</h1>
+   <p class="lede">Quatre Experts se passent le relais dans vos outils, Djénéba les orchestre, et rien ne part sans votre accord.</p>
+   <div class="ctas"><a class="btn btn-w" href="#equipes">Choisir ma première équipe <svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></a><a class="btn btn-o" href="#action"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <polygon points="6 3 20 12 6 21 6 3" /> </svg> Voir une équipe au travail</a></div>
+  </div>
+  <div class="mur" id="mur">
+   <div class="mur-h"><label class="sel sel-d"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" /> </svg><span class="sel-l">Choisissez une fonction</span><select id="sel-hero" aria-label="Choisissez une fonction"><option value="0">Commercial &amp; Ventes</option><option value="1">Marketing &amp; Communication</option><option value="2">RH &amp; Talents</option><option value="3">Finance &amp; Comptabilité</option><option value="4">Service client &amp; Fidélisation</option><option value="5">Investissement &amp; Portefeuille</option></select><svg class="ic sel-c" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg></label></div>
+   <div class="mur-b" id="mur-b">
+    <p class="mur-t"><span id="hero-t"></span></p>
+    <ol class="relai" id="hero-rang"></ol>
+    <div class="accord" id="hero-ok" aria-hidden="true"><span class="accord-i"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg></span><div><small id="hero-r"></small><b id="hero-q"></b></div><span class="accord-b"><i>Valider</i><i>Modifier</i></span></div>
+    <div class="livr" id="hero-lv"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg><span><small>Livrable</small><span id="hero-l"></span></span></div>
+   </div>
+   <div class="mur-f"><span class="dj"><i class="av" style="width:34px;height:34px;background-image:url(assets/img/experts/av-chiefofstaff-sq.webp)"></i><span><b>Djénéba</b> orchestre et vous rend compte</span></span></div>
+  </div>
+ </div>
+</section>
+<section class="logos-b"><div class="wrap"><p class="eyebrow e-gris">Ils nous font confiance</p><div class="logos"><img loading="lazy" decoding="async" width="365" height="96" src="assets/img/logos/cl-mstudio.webp" alt="Mstudio"><img loading="lazy" decoding="async" width="264" height="96" src="assets/img/logos/cl-pfo.webp" alt="PFO Africa"><img loading="lazy" decoding="async" width="343" height="96" src="assets/img/logos/cl-mafa.webp" alt="MAFA Holding"><img loading="lazy" decoding="async" width="357" height="96" src="assets/img/logos/cl-ministere.webp" alt="Ministère de la Transition numérique"><img loading="lazy" decoding="async" width="352" height="96" src="assets/img/logos/cl-diaspora.webp" alt="Diaspora Connect"><img loading="lazy" decoding="async" width="134" height="96" src="assets/img/logos/cl-fjn.webp" alt="Fondation Jeunesse Numérique"><img loading="lazy" decoding="async" width="98" height="96" src="assets/img/logos/cl-colibri.webp" alt="Colibri Technologies"></div></div></section><section class="pad" id="probleme"><div class="wrap">
+ <div class="sh"><p class="eyebrow">Le point de départ</p><h2>Vos équipes passent trop de temps sur ce qui se répète.</h2>
+  <p>Relancer, saisir, répondre, classer : le travail à faible valeur mange les journées, et le savoir de la maison reste dans quelques têtes.</p></div>
+ <div class="pb">
+  <div class="pb-c"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8D68FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" /> <path d="M21 3v5h-5" /> <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" /> <path d="M8 16H3v5" /> </svg><b>Trop de tâches répétitives</b><p>Relances, saisies, réponses, classements : chaque semaine, les mêmes heures partent dans les mêmes gestes.</p></div>
+  <div class="pb-c"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8D68FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" /> <path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59" /> <path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59" /> </svg><b>Les données se perdent d'un service à l'autre</b><p>Chaque service a ses fichiers et ses outils, et l'information se retrouve à la main, quand elle se retrouve.</p></div>
+  <div class="pb-c"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8D68FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" /> <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" /> <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" /> <path d="M17.599 6.5a3 3 0 0 0 .399-1.375" /> <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" /> <path d="M3.477 10.896a4 4 0 0 1 .585-.396" /> <path d="M19.938 10.5a4 4 0 0 1 .585.396" /> <path d="M6 18a4 4 0 0 1-1.967-.516" /> <path d="M19.967 17.484A4 4 0 0 1 18 18" /> </svg><b>Le savoir part avec ceux qui s'en vont</b><p>Ce que la maison sait vit dans la tête de quelques personnes, jamais dans ses outils.</p></div>
+  <div class="pb-c pb-d"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" /> </svg><b>Vos équipes pourraient créer bien plus de valeur</b><p>À effectif constant, chacun pourrait suivre plus de clients, sortir plus de dossiers, ouvrir plus de marchés.</p></div>
+ </div>
+</div></section><section class="pad soft" id="equipes"><div class="wrap">
+ <div class="sh"><p class="eyebrow">Les équipes</p><h2>Choisissez votre première équipe d'<span class="acc-v">Experts</span>.</h2>
+  <p>Chaque fonction a son équipe de quatre Experts, qui se passent le relais. Vous commencez par celle qui vous coûte le plus.</p></div>
+ <div class="eq-grid"><button class="eq-c" data-go="0"><span class="eq-h"><span class="chip"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8D68FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m11 17 2 2a1 1 0 1 0 3-3" /> <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" /> <path d="m21 3 1 11h-2" /> <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" /> <path d="M3 4h8" /> </svg></span><span><b>Commercial &amp; Ventes</b><em>De la cible à la vente signée</em></span></span><span class="eq-g"><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-seydou-sq.webp)"></i><b>Seydou</b><em>Veille commerciale</em></span><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-kouassi-sq.webp)"></i><b>Kouassi</b><em>Prospection et relances</em></span><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-sena-sq.webp)"></i><b>Sèna</b><em>Qualification et propositions</em></span><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-aminata-sq.webp)"></i><b>Aminata</b><em>Suivi du pipeline</em></span></span><span class="eq-l"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22A45D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Des rendez-vous qualifiés et des ventes signées</span><span class="eq-go">Voir l'équipe au travail <svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></span></button><button class="eq-c" data-go="1"><span class="eq-h"><span class="chip"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8D68FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m3 11 18-5v12L3 14v-3z" /> <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" /> </svg></span><span><b>Marketing &amp; Communication</b><em>De la stratégie à la campagne mesurée</em></span></span><span class="eq-g"><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-aya-sq.webp)"></i><b>Aya</b><em>Stratégie de contenu</em></span><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-fatima-sq.webp)"></i><b>Fatima</b><em>Contenus et réseaux</em></span><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-koffi-sq.webp)"></i><b>Koffi</b><em>Design</em></span><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-yao-sq.webp)"></i><b>Yao</b><em>Campagnes et résultats</em></span></span><span class="eq-l"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22A45D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Une campagne publiée à temps, et ses résultats chiffrés</span><span class="eq-go">Voir l'équipe au travail <svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></span></button><button class="eq-c" data-go="2"><span class="eq-h"><span class="chip"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8D68FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" /> </svg></span><span><b>RH &amp; Talents</b><em>Du recrutement à l'équipe qui reste</em></span></span><span class="eq-g"><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-adjoua-sq.webp)"></i><b>Adjoua</b><em>Recrutement</em></span><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-fatou-sq.webp)"></i><b>Fatou</b><em>RH et paie</em></span><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-lamine-sq.webp)"></i><b>Lamine</b><em>Onboarding et formation</em></span><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-cheikh-sq.webp)"></i><b>Cheikh</b><em>Climat social</em></span></span><span class="eq-l"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22A45D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Une recrue en poste, payée à temps, qui reste</span><span class="eq-go">Voir l'équipe au travail <svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></span></button><button class="eq-c" data-go="3"><span class="eq-h"><span class="chip"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8D68FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" /> <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" /> </svg></span><span><b>Finance &amp; Comptabilité</b><em>De la facture au chiffre fiable</em></span></span><span class="eq-g"><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-kadiatou-sq.webp)"></i><b>Kadiatou</b><em>Factures</em></span><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-daouda-sq.webp)"></i><b>Daouda</b><em>Trésorerie et recouvrement</em></span><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-rokia-sq.webp)"></i><b>Rokia</b><em>Dépenses</em></span><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-mamadou-sq.webp)"></i><b>Mamadou</b><em>Comptabilité et contrôle de gestion</em></span></span><span class="eq-l"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22A45D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Des comptes à jour et une trésorerie sous contrôle</span><span class="eq-go">Voir l'équipe au travail <svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></span></button><button class="eq-c" data-go="4"><span class="eq-h"><span class="chip"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8D68FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" /> </svg></span><span><b>Service client &amp; Fidélisation</b><em>De la demande au client satisfait</em></span></span><span class="eq-g"><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-awa-sq.webp)"></i><b>Awa</b><em>Réponse aux clients</em></span><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-salif-sq.webp)"></i><b>Salif</b><em>Réclamations et livraisons</em></span><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-akissi-sq.webp)"></i><b>Akissi</b><em>Satisfaction et fidélisation</em></span><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-ousmane-sq.webp)"></i><b>Ousmane</b><em>Qualité et base de réponses</em></span></span><span class="eq-l"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22A45D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Des clients qui ont une réponse en minutes, et qui reviennent</span><span class="eq-go">Voir l'équipe au travail <svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></span></button><button class="eq-c" data-go="5"><span class="eq-h"><span class="chip"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8D68FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /> <polyline points="16 7 22 7 22 13" /> </svg></span><span><b>Investissement &amp; Portefeuille</b><em>Du dossier reçu au portefeuille suivi</em></span></span><span class="eq-g"><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-fifame-sq.webp)"></i><b>Fifamè</b><em>Sourcing des dossiers</em></span><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-alioune-sq.webp)"></i><b>Alioune</b><em>Analyse et due diligence</em></span><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-ibrahim-sq.webp)"></i><b>Ibrahim</b><em>Pactes et juridique</em></span><span class="eq-p"><i class="av" style="width:64px;height:64px;background-image:url(assets/img/experts/av-nadia-sq.webp)"></i><b>Nadia</b><em>Suivi du portefeuille</em></span></span><span class="eq-l"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22A45D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Des dossiers notés en jours, et un portefeuille suivi chaque mois</span><span class="eq-go">Voir l'équipe au travail <svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></span></button></div>
+</div></section><section class="pad" id="action"><div class="wrap">
+ <div class="sh"><p class="eyebrow">Une équipe en action</p><h2>Quatre Experts se passent le relais, vous gardez la décision.</h2></div>
+ <div class="ac-top"><label class="sel"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" /> </svg><span class="sel-l">Choisissez une fonction</span><select id="sel-action" aria-label="Choisissez une fonction"><option value="0">Commercial &amp; Ventes</option><option value="1">Marketing &amp; Communication</option><option value="2">RH &amp; Talents</option><option value="3">Finance &amp; Comptabilité</option><option value="4">Service client &amp; Fidélisation</option><option value="5">Investissement &amp; Portefeuille</option></select><svg class="ic sel-c" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg></label></div>
+ <div class="ac">
+  <div class="ac-cycle">
+   <p class="ac-t" id="ac-t"></p>
+   <ol class="cy" id="ac-cy"></ol>
+  </div>
+  <div class="ac-side">
+   <div class="ac-b"><p class="mini">Ce que vous obtenez</p><ul class="ticks" id="ac-res"></ul></div>
+   <div class="ac-b"><p class="mini">Ce que vous recevez</p><ul class="ticks" id="ac-recu"></ul></div>
+   <div class="ac-b ac-pour"><p class="mini">Pour quelles entreprises</p><p id="ac-pour"></p></div>
+  </div>
+ </div>
+</div></section><section class="pad dark" id="difference"><div class="wrap">
+ <div class="sh sh-d"><p class="eyebrow e-lav">La question qui revient</p><h2>ChatGPT vous répond. Un <span class="acc">Expert IA</span> fait le travail.</h2></div>
+ <div class="cmp"><div class="cmp-hd"><span>ChatGPT, Claude, Copilot</span><span><img loading="lazy" decoding="async" width="96" height="96" src="assets/img/logos/yelema-tuile.webp" alt="">Un Expert Yelema</span></div><div class="cmp-r"><span class="cmp-n"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E4765A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M18 6 6 18" /> <path d="m6 6 12 12" /> </svg>Il attend qu'on lui écrive.</span><span class="cmp-y"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22A45D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Il prend les devants : il relance, prépare et vous rend compte.</span></div><div class="cmp-r"><span class="cmp-n"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E4765A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M18 6 6 18" /> <path d="m6 6 12 12" /> </svg>Chacun l'utilise dans son coin.</span><span class="cmp-y"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22A45D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Il tient un poste dans une équipe, pour toute l'entreprise.</span></div><div class="cmp-r"><span class="cmp-n"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E4765A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M18 6 6 18" /> <path d="m6 6 12 12" /> </svg>Chacun lui réexplique tout.</span><span class="cmp-y"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22A45D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Il garde la mémoire de votre entreprise : clients, prix, décisions.</span></div><div class="cmp-r"><span class="cmp-n"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E4765A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M18 6 6 18" /> <path d="m6 6 12 12" /> </svg>Vous copiez, vous collez, vous envoyez.</span><span class="cmp-y"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22A45D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Il agit dans vos outils, avec votre accord pour les actes sensibles.</span></div><div class="cmp-r"><span class="cmp-n"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E4765A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M18 6 6 18" /> <path d="m6 6 12 12" /> </svg>Pensé ailleurs, pour d'autres usages.</span><span class="cmp-y"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22A45D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Pensé ici : droit OHADA, règles locales, mobile money.</span></div></div>
+ <div class="mem">
+  <div class="mem-txt"><p class="eyebrow e-lav">La mémoire d'entreprise</p><h3>Ce qu'un Expert apprend, toute l'équipe le sait.</h3>
+   <p>Chaque échange enrichit une mémoire commune, sur votre serveur. Personne ne repart de zéro, ni vos Experts ni vos salariés.</p></div>
+  <div class="mem-g"><div class="mem-c"><i class="av" style="width:40px;height:40px;background-image:url(assets/img/experts/av-awa-sq.webp)"></i><span><b>Awa apprend</b><em>« Mme Koné préfère WhatsApp aux e-mails. »</em></span></div><div class="mem-c"><i class="av" style="width:40px;height:40px;background-image:url(assets/img/experts/av-fatima-sq.webp)"></i><span><b>Fatima s'en sert</b><em>La promotion part à Mme Koné sur WhatsApp.</em></span></div><div class="mem-c"><i class="av" style="width:40px;height:40px;background-image:url(assets/img/experts/av-chiefofstaff-sq.webp)"></i><span><b>Djénéba apprend</b><em>« Les gros devis passent d'abord par le directeur général. »</em></span></div><div class="mem-c"><i class="av" style="width:40px;height:40px;background-image:url(assets/img/experts/av-kouassi-sq.webp)"></i><span><b>Kouassi s'en sert</b><em>Son devis part au directeur général avant le client.</em></span></div></div>
+ </div>
+</div></section><section class="pad" id="demarrage"><div class="wrap">
+ <div class="sh"><p class="eyebrow">Votre démarrage</p><h2>Votre équipe d'<span class="acc-v">Experts</span> au travail en une semaine, sans projet informatique.</h2></div>
+ <div class="dm"><div class="dm-s"><span class="dm-q">Jour 1</span><span class="dm-n">1</span><div class="dm-c"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8D68FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <circle cx="12" cy="12" r="6" /> <circle cx="12" cy="12" r="2" /> </svg><b>On choisit votre première fonction</b><p>Avec le dirigeant, on part de la fonction qui vous coûte le plus, en temps ou en argent.</p></div></div><div class="dm-s"><span class="dm-q">Semaine 1</span><span class="dm-n">2</span><div class="dm-c"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8D68FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 22v-5" /> <path d="M9 8V2" /> <path d="M15 8V2" /> <path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z" /> </svg><b>On branche l'équipe sur vos outils</b><p>Vos e-mails, vos fichiers, votre logiciel : les quatre Experts travaillent là où vous travaillez déjà.</p></div></div><div class="dm-s"><span class="dm-q">Chaque semaine</span><span class="dm-n">3</span><div class="dm-c"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8D68FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" /> <path d="M21 3v5h-5" /> <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" /> <path d="M8 16H3v5" /> </svg><b>Le cycle tourne, Djénéba vous rend compte</b><p>Les Experts se passent le relais, Djénéba vous dit ce qui est fait et ce qui attend votre décision.</p></div></div><div class="dm-s"><span class="dm-q">Quand vous êtes prêt</span><span class="dm-n">4</span><div class="dm-c"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8D68FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" /> <path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59" /> <path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59" /> </svg><b>On ouvre une deuxième fonction</b><p>Une nouvelle équipe rejoint la première, avec la même mémoire de votre entreprise.</p></div></div></div>
+ <div class="outils"><p>Branchés sur vos outils, joignables sur vos canaux, parmi plus de 3 000 connecteurs.</p><div class="outils-l"><img loading="lazy" decoding="async" width="96" height="96" src="assets/img/logos/lg-whatsapp.webp" alt="WhatsApp" title="WhatsApp"><img loading="lazy" decoding="async" width="128" height="96" src="assets/img/logos/lg-gmail.webp" alt="Gmail" title="Gmail"><img loading="lazy" decoding="async" width="91" height="96" src="assets/img/logos/lg-teams.webp" alt="Teams" title="Teams"><img loading="lazy" decoding="async" width="96" height="96" src="assets/img/logos/lg-sage.webp" alt="Sage" title="Sage"><img loading="lazy" decoding="async" width="32" height="32" src="assets/img/logos/lg-odoo.webp" alt="Odoo" title="Odoo"><img loading="lazy" decoding="async" width="96" height="96" src="assets/img/logos/lg-excel.webp" alt="Excel" title="Excel"><img loading="lazy" decoding="async" width="96" height="96" src="assets/img/logos/lg-hubspot.webp" alt="HubSpot" title="HubSpot"><img loading="lazy" decoding="async" width="128" height="34" src="assets/img/logos/lg-orangemoney.webp" alt="Orange Money" title="Orange Money"><img loading="lazy" decoding="async" width="96" height="96" src="assets/img/logos/lg-wave.webp" alt="Wave" title="Wave"></div></div>
+</div></section><section class="pad soft" id="offres"><div class="wrap">
+ <div class="sh"><p class="eyebrow">Nos offres</p><h2>Commencez par le dirigeant, étendez fonction par fonction.</h2>
+  <p>Un même principe pour les trois : vous achetez un résultat, que nous installons, opérons et tenons à jour.</p></div>
+ <div class="ofs">
+  <div class="of "><span class="of-n">1</span><p class="of-tag">Exécutif</p><h3>Le dirigeant</h3><p class="of-pour">Pour le chef d'entreprise, avec Djénéba à ses côtés.</p><p class="of-prix">300 000 F CFA<span> par mois</span></p><p class="of-sous">sans frais d'installation</p><ul><li><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg><span><b>Vous lui parlez</b> : elle vous répond à la voix</span></li><li><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg><span><b>Votre agenda et vos e-mails</b>, réponses préparées</span></li><li><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg><span><b>Chaque document reçu analysé</b>, erreurs signalées</span></li><li><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg><span><b>Vos tableaux de bord</b>, à la demande</span></li></ul><a class="btn btn-p" href="#contact">Souscrire en ligne</a></div>
+  <div class="of of-d"><span class="of-n">2</span><p class="of-tag">Entreprise</p><h3>Une équipe par fonction</h3><p class="of-pour">Pour une fonction qui vous coûte : quatre Experts qui se passent le relais.</p><p class="of-prix">Sur audit<span></span></p><p class="of-sous">abonnement par fonction, chiffré après l'audit</p><ul><li><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg><span><b>Une fonction complète</b> : commercial, marketing, RH, finance, service client ou investissement</span></li><li><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg><span><b>Quatre Experts</b> se passent le relais, Djénéba coordonne</span></li><li><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg><span><b>Branché sur vos outils</b> et vos règles</span></li><li><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg><span><b>Opéré et amélioré</b> chaque mois par notre équipe</span></li></ul><a class="btn btn-w" href="#contact">Demander un audit</a></div>
+  <div class="of "><span class="of-n">3</span><p class="of-tag">Custom</p><h3>Toute l'organisation</h3><p class="of-pour">Pour les administrations et les grands donneurs d'ordre.</p><p class="of-prix">Sur devis<span></span></p><p class="of-sous">après un atelier de cadrage</p><ul><li><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg><span><b>Plusieurs directions</b>, plusieurs sites</span></li><li><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg><span><b>Des développements IA</b> propres à votre organisation</span></li><li><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg><span><b>Un serveur installé chez vous</b>, avec un modèle open source</span></li><li><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg><span><b>Opéré et amélioré</b> par notre équipe dans la durée</span></li></ul><a class="btn btn-p" href="#contact">Parler de mon projet</a></div>
+ </div>
+ <p class="ofs-inc"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8D68FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /> </svg><span><b>Chaque offre comprend l'IA d'entreprise</b> : un espace de discussion confidentiel, sur votre serveur, pour tous vos salariés.</span></p>
+</div></section><section class="pad dark" id="securite"><div class="wrap">
+ <div class="sh sh-d"><p class="eyebrow e-lav">Sécurité et données</p><h2>Vos données restent <span class="acc">chez vous</span>, et vous en gardez le contrôle.</h2>
+  <p>L'IA est déjà dans votre entreprise, par le téléphone de vos salariés. Yelema la ramène sur votre serveur.</p></div>
+ <div class="sec">
+  <div class="sec-c sec-risk"><p class="mini m-coral">Aujourd'hui, sans cadre</p><h3>Un contrat collé dans un ChatGPT personnel</h3>
+   <ul class="cross"><li><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E4765A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M18 6 6 18" /> <path d="m6 6 12 12" /> </svg>Le document part chez un tiers</li><li><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E4765A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M18 6 6 18" /> <path d="m6 6 12 12" /> </svg>Il peut servir à entraîner le modèle</li><li><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E4765A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M18 6 6 18" /> <path d="m6 6 12 12" /> </svg>Personne ne sait qui a envoyé quoi</li></ul></div>
+  <div class="sec-c sec-chat"><p class="mini m-lav">Avec Yelema</p><h3>L'IA d'entreprise, pour tous vos salariés</h3>
+   <div class="chat"><div class="chat-q">Résume ce contrat fournisseur et signale les clauses à risque.</div>
+    <div class="chat-r"><img loading="lazy" decoding="async" width="96" height="96" src="assets/img/logos/yelema-tuile.webp" alt="">Trois clauses à revoir : pénalités de retard, durée de 36 mois, résiliation à sens unique. Le document reste sur votre serveur.</div></div>
+   <ul class="ticks t-lav"><li><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22A45D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Le document reste sur votre serveur</li><li><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22A45D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Le modèle ne voit que l'extrait utile, et n'en garde rien</li><li><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22A45D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>Chacun son espace, la mémoire profite à tous</li></ul></div>
+ </div>
+ <div class="niv">
+  <div class="niv-c"><span class="niv-t">Niveau 1</span><b>Un serveur dédié, hébergé pour vous</b><p>Pour la plupart des entreprises : un serveur à vous seul, isolé des autres clients, chiffré et sauvegardé.</p></div>
+  <div class="niv-c"><span class="niv-t">Niveau 2</span><b>Un serveur installé dans vos locaux</b><p>Pour les ministères et les banques : le serveur et un modèle open source tournent chez vous, aucun document ne quitte vos murs.</p></div>
+ </div>
+ <div class="garanties"><span><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /> </svg>Conforme aux exigences de l'ARTCI</span><span><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="18" height="11" x="3" y="11" rx="2" ry="2" /> <path d="M7 11V7a5 5 0 0 1 10 0v4" /> </svg>Chiffré en transit et au repos</span><span><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49" /> <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242" /> <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143" /> <path d="m2 2 20 20" /> </svg>Aucun modèle entraîné sur vos données</span><span><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /> <path d="M14 2v4a2 2 0 0 0 2 2h4" /> <path d="M10 9H8" /> <path d="M16 13H8" /> <path d="M16 17H8" /> </svg>Vous repartez avec tout</span></div>
+</div></section><section class="pad" id="temoignages"><div class="wrap">
+ <div class="sh"><p class="eyebrow">Ils s'en servent déjà</p><h2>Les <span class="acc-v">Experts</span> sont déjà au travail.</h2></div>
+ <div class="tm">
+  <figure class="tm-c"><svg class="ic tm-q" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C5C4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" /> <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" /> </svg><blockquote>Avec Adjoua, j'ai recruté mon responsable projet, de la fiche de poste jusqu'au choix final. Elle a rédigé l'annonce, classé les candidatures et préparé mes entretiens. Le recrutement a pris quelques jours au lieu de plusieurs semaines.</blockquote>
+   <figcaption><img loading="lazy" decoding="async" width="134" height="96" src="assets/img/logos/cl-fjn.webp" alt=""><span><b>Florence Tahiri Fadika</b><em>Fondation Jeunesse Numérique</em></span><span class="tm-ex"><i class="av" style="width:34px;height:34px;background-image:url(assets/img/experts/av-adjoua-sq.webp)"></i>Adjoua, équipe RH</span></figcaption></figure>
+  <figure class="tm-c"><svg class="ic tm-q" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C5C4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" /> <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" /> </svg><blockquote>Elle prépare mes réunions, tient le relevé des décisions et me rappelle les engagements pris. Je récupère mes lundis matin. Et elle me relance quand je traîne, ce qu'aucun outil n'avait osé faire avant elle.</blockquote>
+   <figcaption><img loading="lazy" decoding="async" width="98" height="96" src="assets/img/logos/cl-colibri.webp" alt=""><span><b>Sarah Mockey</b><em>Colibri Technologies</em></span><span class="tm-ex"><i class="av" style="width:34px;height:34px;background-image:url(assets/img/experts/av-chiefofstaff-sq.webp)"></i>Djénéba, Chief of Staff</span></figcaption></figure>
+ </div>
+</div></section><section class="pad soft" id="faq"><div class="wrap">
+ <div class="sh"><p class="eyebrow">Questions fréquentes</p><h2>Les questions qui reviennent.</h2></div>
+ <div class="fqs"><details class="fq"><summary>Un Expert Yelema, c'est quoi ?<svg class="ic fq-c" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg></summary><p>C'est une IA qui tient un poste dans une équipe de quatre, sur une fonction de votre entreprise : commercial, marketing, RH, finance, service client ou investissement. Il connaît votre activité, se souvient de tout ce que vous lui avez appris et agit dans vos outils, sur vos canaux. Vous lui fixez un objectif, il s'organise pour l'atteindre. Contrairement à un assistant que chacun règle pour soi, il arrive avec ses compétences, travaille pour toute votre entreprise, et l'équipe Yelema le suit chaque jour.</p></details><details class="fq"><summary>On a déjà ChatGPT ou Copilot : pourquoi un Expert ?<svg class="ic fq-c" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg></summary><p>Ces outils répondent à la personne qui les ouvre, mais ils ne connaissent pas votre entreprise et n'agissent dans aucun de vos outils : il faut tout réexpliquer, puis recopier le résultat à la main. Un Expert IA tient un poste. Il garde la mémoire de votre activité, travaille directement dans vos outils et sur vos canaux, et notre équipe l'opère. Il fonctionne d'ailleurs avec ces mêmes modèles : vous branchez votre compte chez le fournisseur de votre choix, et nous réglons l'Expert dessus.</p></details><details class="fq"><summary>Est-ce qu'il agit à ma place, ou remplace mes employés ?<svg class="ic fq-c" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg></summary><p>Ni l'un ni l'autre. Vous décidez, outil par outil, ce qu'il prépare et ce qu'il envoie seul, et ce droit se retire aussi vite qu'il se donne. Il reprend ce qui, dans un poste, se répète et s'écrit : le tri, la saisie, la relance, la mise en forme. Un recruteur qui travaille avec Adjoua ne lit plus deux cents CV, il reçoit des profils déjà notés et garde l'entretien. La décision et la relation restent humaines.</p></details><details class="fq"><summary>Et s'il se trompe, ou si un modèle tombe en panne ?<svg class="ic fq-c" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg></summary><p>Chaque Expert est encadré. Un second contrôle relit ses réponses, des tests réguliers mesurent sa fiabilité, et tout acte sensible (un engagement, un paiement, un message qui sort du cadre que vous avez validé) attend votre accord. Il ne dépend d'aucun modèle d'IA en particulier : si l'un tombe en panne ou qu'un meilleur sort, nous changeons le moteur, et votre Expert garde tout ce qu'il a appris.</p></details><details class="fq"><summary>Mes équipes doivent-elles savoir se servir de l'IA ?<svg class="ic fq-c" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg></summary><p>Non. Elles lui parlent comme à un collègue, en français, par écrit ou par message vocal : sur votre espace de travail Yelema, sur Telegram, sur Slack, sur Teams ou par e-mail. Pas de formation à suivre, ni de jargon à apprendre.</p></details><details class="fq"><summary>Peut-on commencer par une seule fonction ?<svg class="ic fq-c" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg></summary><p>Oui, c'est même ce que nous recommandons. Beaucoup de dirigeants commencent par l'offre Exécutif, puis ajoutent la fonction qui leur coûte le plus : commercial, marketing, RH, finance, service client ou investissement.</p></details><details class="fq"><summary>Comment se passe le déploiement ?<svg class="ic fq-c" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg></summary><p>Vous créez votre espace en cinq minutes et vous choisissez votre équipe, en commençant par la fonction qui vous coûte le plus, en temps ou en argent. Nous branchons vos outils et réglons vos Experts sur votre activité : ils sont au travail dès la première semaine. Rien à installer de votre côté, aucune équipe informatique à mobiliser. Vos équipes leur parlent sur Telegram, Slack, Teams ou par e-mail, et votre espace web garde tout ce qu'ils produisent.</p></details><details class="fq"><summary>Si j'arrête, à qui appartiennent mes Experts ?<svg class="ic fq-c" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg></summary><p>À vous. Vos Experts, leur mémoire et leurs compétences sont un actif de votre entreprise : nous construisons, nous opérons, et vous gardez tout. Si vous arrêtez, nous vous rendons vos données dans un format lisible et nous supprimons nos copies. Aucun enfermement, ni technique ni contractuel.</p></details></div>
+</div></section>
+<section class="pad" id="contact"><div class="wrap">
+ <div class="cta"><img class="cta-f" aria-hidden="true" loading="lazy" src="assets/img/motifs/pattern-3.svg" alt="">
+  <div class="cta-av"><i class="av" style="width:54px;height:54px;background-image:url(assets/img/experts/av-seydou-sq.webp)"></i><i class="av" style="width:54px;height:54px;background-image:url(assets/img/experts/av-fatima-sq.webp)"></i><i class="av" style="width:54px;height:54px;background-image:url(assets/img/experts/av-adjoua-sq.webp)"></i><i class="av" style="width:54px;height:54px;background-image:url(assets/img/experts/av-mamadou-sq.webp)"></i><i class="av" style="width:54px;height:54px;background-image:url(assets/img/experts/av-awa-sq.webp)"></i><i class="av" style="width:54px;height:54px;background-image:url(assets/img/experts/av-fifame-sq.webp)"></i></div>
+  <h2>Votre première équipe d'<span class="acc">Experts</span> peut démarrer cette semaine.</h2>
+  <p>Dites-nous la fonction qui vous coûte le plus. Nous vous montrons l'équipe au travail sur l'un de vos cas réels.</p>
+  <div class="ctas"><a class="btn btn-w" href="mailto:contact@yelema.ai">Demander une démo <svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></a><a class="btn btn-o" href="mailto:contact@yelema.ai"><svg class="ic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /> </svg> contact@yelema.ai</a></div>
+ </div>
+</div></section>
+<footer class="ft"><div class="wrap ft-in">
+ <div><img width="359" height="104" src="assets/img/logos/yelema-long-blanc.webp" alt="Yelema" class="ft-lg"><p>Une équipe d'Experts IA pour chaque fonction, au travail dans les entreprises d'Afrique francophone.</p><p class="ft-a">Ivoire Trade Center, Abidjan, Côte d'Ivoire</p></div>
+ <div><h4>Les équipes</h4><a href="#action" data-go="0">Commercial &amp; Ventes</a><a href="#action" data-go="1">Marketing &amp; Communication</a><a href="#action" data-go="2">RH &amp; Talents</a><a href="#action" data-go="3">Finance &amp; Comptabilité</a><a href="#action" data-go="4">Service client &amp; Fidélisation</a><a href="#action" data-go="5">Investissement &amp; Portefeuille</a></div>
+ <div><h4>Naviguer</h4><a href="#action">Comment ça marche</a><a href="#offres">Offres</a><a href="#securite">Sécurité</a><a href="#faq">Questions</a><a href="mailto:contact@yelema.ai">Contact</a></div>
+</div><div class="wrap ft-b">© 2026 Yelema. Abidjan, Côte d'Ivoire</div></footer></main>
+<script>var C=[{"n": "Commercial & Ventes", "t": "De la cible à la vente signée", "d": "Vous voulez plus de rendez-vous qualifiés", "x": [["seydou", "Seydou", "Veille commerciale", "Repère les entreprises à viser et les signaux d'achat"], ["kouassi", "Kouassi", "Prospection et relances", "Écrit aux prospects et relance au bon moment"], ["sena", "Sèna", "Qualification et propositions", "Clarifie le besoin et prépare la proposition"], ["aminata", "Aminata", "Suivi du pipeline", "Tient le pipeline à jour et signale les affaires qui coincent"]], "l": "Des rendez-vous qualifiés et des ventes signées", "r": "Votre directeur commercial", "a": ["sena", "Sèna"], "q": "Envoyer la proposition au client ?", "res": ["Plus de rendez-vous qualifiés chaque semaine", "Aucun devis oublié, chaque relance part à temps", "Une prévision de ventes que vous pouvez croire"], "pour": "Les entreprises qui vendent à d'autres entreprises : distribution, services, industrie, banques et assurances.", "recu": ["La liste des comptes à viser, notés et justifiés", "Les propositions prêtes à envoyer", "Le point pipeline du vendredi"]}, {"n": "Marketing & Communication", "t": "De la stratégie à la campagne mesurée", "d": "Vous lancez une campagne ou un produit", "x": [["aya", "Aya", "Stratégie de contenu", "Transforme vos objectifs en brief et en calendrier"], ["fatima", "Fatima", "Contenus et réseaux", "Rédige les textes, posts et e-mails dans votre ton"], ["koffi", "Koffi", "Design", "Crée les visuels et les déclinaisons dans votre charte"], ["yao", "Yao", "Campagnes et résultats", "Lance, mesure et propose les ajustements"]], "l": "Une campagne publiée à temps, et ses résultats chiffrés", "r": "Votre responsable marketing", "a": ["fatima", "Fatima"], "q": "Publier les douze publications du mois ?", "res": ["Un calendrier tenu, sans publication oubliée", "Des visuels dans votre charte, déclinés sur chaque canal", "Le coût de chaque contact, campagne par campagne"], "pour": "Les marques et réseaux qui communiquent chaque semaine : distribution, télécoms, banques, restauration.", "recu": ["Le calendrier éditorial du mois", "Les textes et visuels prêts à publier", "Le bilan chiffré de chaque campagne"]}, {"n": "RH & Talents", "t": "Du recrutement à l'équipe qui reste", "d": "Vous ouvrez un poste", "x": [["adjoua", "Adjoua", "Recrutement", "Diffuse l'annonce, trie les candidatures et planifie les entretiens"], ["fatou", "Fatou", "RH et paie", "Ouvre le dossier, le contrat et prépare la première paie"], ["lamine", "Lamine", "Onboarding et formation", "Organise l'arrivée et le parcours des premières semaines"], ["cheikh", "Cheikh", "Climat social", "Écoute les équipes et signale ce qui fait partir les gens"]], "l": "Une recrue en poste, payée à temps, qui reste", "r": "Votre DRH", "a": ["adjoua", "Adjoua"], "q": "Envoyer la promesse d'embauche à la candidate retenue ?", "res": ["Un poste pourvu en jours, pas en mois", "Une première paie juste, déclarations à jour", "Moins de départs dans la première année"], "pour": "Les entreprises qui recrutent souvent ou gèrent plusieurs sites : distribution, industrie, hôtellerie, services.", "recu": ["Les profils notés, prêts pour l'entretien", "Le contrat et le dossier du salarié", "Le baromètre du climat social"]}, {"n": "Finance & Comptabilité", "t": "De la facture au chiffre fiable", "d": "Les factures et les paiements s'accumulent", "x": [["kadiatou", "Kadiatou", "Factures", "Saisit et contrôle chaque facture, signale les pièces manquantes"], ["daouda", "Daouda", "Trésorerie et recouvrement", "Suit les échéances et relance les impayés"], ["rokia", "Rokia", "Dépenses", "Contrôle les achats et les notes de frais"], ["mamadou", "Mamadou", "Comptabilité et contrôle de gestion", "Rapproche, clôture le mois et prépare le reporting"]], "l": "Des comptes à jour et une trésorerie sous contrôle", "r": "Votre directeur financier", "a": ["daouda", "Daouda"], "q": "Envoyer la relance aux clients en retard ?", "res": ["Chaque facture saisie et contrôlée", "Des impayés relancés sans oubli", "Une clôture du mois en jours, pas en semaines"], "pour": "Les entreprises qui traitent des dizaines de factures par mois, dans Sage, Odoo ou Excel.", "recu": ["Les factures prêtes à valider", "La balance âgée et les relances", "Le reporting mensuel, chaque chiffre expliqué"]}, {"n": "Service client & Fidélisation", "t": "De la demande au client satisfait", "d": "Vos clients écrivent jour et nuit", "x": [["awa", "Awa", "Réponse aux clients", "Répond sur WhatsApp, e-mail et téléphone, jour et nuit"], ["salif", "Salif", "Réclamations et livraisons", "Suit chaque réclamation, commande ou retour jusqu'à sa solution"], ["akissi", "Akissi", "Satisfaction et fidélisation", "Mesure la satisfaction et rappelle les clients qui s'éloignent"], ["ousmane", "Ousmane", "Qualité et base de réponses", "Écoute les échanges et tient à jour les bonnes réponses"]], "l": "Des clients qui ont une réponse en minutes, et qui reviennent", "r": "Votre responsable service client", "a": ["salif", "Salif"], "q": "Accorder le geste commercial au client ?", "res": ["Une réponse en minutes, même la nuit et le week-end", "Chaque réclamation suivie jusqu'à sa solution", "Moins de clients perdus sans qu'on le sache"], "pour": "Les entreprises au contact de milliers de clients : banques, assurances, télécoms, distribution, e-commerce.", "recu": ["Les réponses envoyées, dans votre ton", "Le suivi des réclamations ouvertes", "Le baromètre de satisfaction du mois"]}, {"n": "Investissement & Portefeuille", "t": "Du dossier reçu au portefeuille suivi", "d": "Les dossiers d'investissement s'accumulent", "x": [["fifame", "Fifamè", "Sourcing des dossiers", "Repère les entreprises qui correspondent à votre thèse"], ["alioune", "Alioune", "Analyse et due diligence", "Note le dossier, audite le modèle et prépare les questions"], ["ibrahim", "Ibrahim", "Pactes et juridique", "Relit les statuts et le pacte, signale les clauses à négocier"], ["nadia", "Nadia", "Suivi du portefeuille", "Suit les participations et prépare le reporting aux investisseurs"]], "l": "Des dossiers notés en jours, et un portefeuille suivi chaque mois", "r": "Votre directeur d'investissement", "a": ["alioune", "Alioune"], "q": "Présenter le dossier au comité d'investissement ?", "res": ["Chaque dossier noté contre votre thèse, en jours", "Des due diligences sans pièce oubliée", "Un portefeuille suivi chaque mois, sans relance"], "pour": "Les fonds d'investissement, business angels, banques d'affaires et programmes d'accompagnement.", "recu": ["La note de chaque dossier, justifiée", "La liste des points à négocier au pacte", "Le reporting trimestriel aux investisseurs"]}];
+var I={"target": "<svg class=\"ic\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <circle cx=\"12\" cy=\"12\" r=\"10\" /> <circle cx=\"12\" cy=\"12\" r=\"6\" /> <circle cx=\"12\" cy=\"12\" r=\"2\" /> </svg>", "check": "<svg class=\"ic\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M20 6 9 17l-5-5\" /> </svg>", "flag": "<svg class=\"ic\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#301667\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <path d=\"M20 6 9 17l-5-5\" /> </svg>"};
+(function(){
+var $=function(s){return document.querySelector(s)};
+function av(k,px){return '<i class="av" style="width:'+px+'px;height:'+px+'px;background-image:url(assets/img/experts/av-'+k+'-sq.webp)"></i>'}
+
+/* hero : une équipe à la fois, qui se passe le relais sous vos yeux */
+var calme=matchMedia("(prefers-reduced-motion: reduce)").matches;
+var cur=0,choisi=false,survol=false,visible=true,pas=[],suivant=null;
+var OK='<svg class="ic" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+function stop(){pas.forEach(clearTimeout);pas=[];clearTimeout(suivant)}
+function etat(n){/* n : 0..4 relais, 5 accord, 6 livrable */
+ var li=document.querySelectorAll("#hero-rang .rl");
+ li.forEach(function(e,j){e.classList.toggle("on",j===n);e.classList.toggle("ok",j<n)});
+ $("#hero-ok").classList.toggle("on",n>=4);$("#hero-lv").classList.toggle("on",n>=5)}
+function remplir(k){var d=C[k];cur=k;
+ $("#hero-t").textContent=d.t;$("#hero-l").textContent=d.l;$("#hero-q").textContent=d.q;
+ $("#hero-r").textContent="Demande d'accord à "+d.r.charAt(0).toLowerCase()+d.r.slice(1);
+ $("#hero-rang").innerHTML=d.x.map(function(x){return '<li class="rl">'+av(x[0],48).replace('<i ','<i role="img" aria-label="'+x[1]+'" ')+'<span><span class="rl-n">'+x[1]+'<em>'+x[2]+'</em></span><span class="rl-a">'+x[3]+'</span></span><span class="rl-s">'+OK+'</span></li>'}).join("");
+ $("#sel-hero").value=k}
+function jouer(){stop();
+ if(calme){etat(6);return}
+ etat(-1);[0,1,2,3,4,5].forEach(function(n,j){pas.push(setTimeout(function(){etat(n)},250+j*620))});
+ suivant=setTimeout(tourne,250+6*620+1400)}
+function montrer(k){var b=$("#mur-b");stop();
+ if(calme){remplir(k);etat(6);return}
+ b.classList.add("sort");setTimeout(function(){remplir(k);b.classList.remove("sort");jouer()},300)}
+function tourne(){if(choisi||calme)return;if(survol||!visible||document.hidden){suivant=setTimeout(tourne,1200);return}
+ montrer((cur+1)%C.length)}
+$("#sel-hero").addEventListener("change",function(){choisi=true;montrer(+this.value)});
+var mur=$("#mur");
+mur.addEventListener("pointerenter",function(){survol=true});
+mur.addEventListener("pointerleave",function(){survol=false});
+mur.addEventListener("focusin",function(){survol=true});
+mur.addEventListener("focusout",function(){survol=false});
+if("IntersectionObserver" in window){new IntersectionObserver(function(e){visible=e[0].isIntersecting}).observe(mur)}
+remplir(0);jouer();
+
+/* une équipe en action : le cycle */
+function action(k){var d=C[k];
+ $("#ac-t").textContent=d.n+" : "+d.t.charAt(0).toLowerCase()+d.t.slice(1);
+ var li=['<li><span class="pt">'+I.target+'</span><span><small>Déclencheur</small>'+d.d+'</span></li>',
+  '<li class="dj-l">'+av("chiefofstaff",40)+'<span><small>Djénéba orchestre</small>Répartit le travail entre les quatre Experts</span></li>'];
+ d.x.forEach(function(x){li.push('<li>'+av(x[0],40)+'<span><small>'+x[1]+'</small>'+x[3]+'</span></li>')});
+ li.push('<li><span class="pt">'+I.check+'</span><div class="ok"><small>Demande d\'accord à '+d.r.charAt(0).toLowerCase()+d.r.slice(1)+'</small><b>'+d.q+'</b><i class="v">Valider</i><i class="m">Modifier</i></div></li>');
+ li.push('<li class="dj-l">'+av("chiefofstaff",40)+'<span><small>Djénéba orchestre</small>Vérifie l\'ensemble et vous rend compte</span></li>');
+ li.push('<li><span class="pt" style="border-color:#301667">'+I.flag+'</span><div class="fin"><small>Livrable</small><span>'+d.l+'</span></div></li>');
+ $("#ac-cy").innerHTML=li.join("");
+ var t=function(a){return a.map(function(x){return '<li>'+I.check+'<span>'+x+'</span></li>'}).join("")};
+ $("#ac-res").innerHTML=t(d.res);$("#ac-recu").innerHTML=t(d.recu);$("#ac-pour").textContent=d.pour;
+ $("#sel-action").value=k}
+$("#sel-action").addEventListener("change",function(){action(+this.value)});
+action(0);
+
+/* une carte d'équipe ou un lien du pied de page ouvre l'équipe au travail */
+document.addEventListener("click",function(e){var a=e.target.closest("[data-go]");if(!a)return;
+ e.preventDefault();action(+a.getAttribute("data-go"));$("#action").scrollIntoView({behavior:"smooth"})});
+
+/* menu : opaque dès qu'on quitte le hero */
+var nav=$("#nav");function n(){nav.classList.toggle("solide",scrollY>60)}
+addEventListener("scroll",n,{passive:true});n();
+
+/* menu mobile */
+var bg=$("#burger");
+function ferme(){nav.classList.remove("open");bg.setAttribute("aria-expanded","false");bg.setAttribute("aria-label","Ouvrir le menu")}
+bg.addEventListener("click",function(){var o=nav.classList.toggle("open");bg.setAttribute("aria-expanded",o?"true":"false");bg.setAttribute("aria-label",o?"Fermer le menu":"Ouvrir le menu");if(o){var a=$("#menu a");a&&a.focus()}});
+document.querySelectorAll("#menu a").forEach(function(a){a.addEventListener("click",ferme)});
+addEventListener("keydown",function(e){if(e.key==="Escape"&&nav.classList.contains("open")){ferme();bg.focus()}});
+addEventListener("resize",function(){if(innerWidth>1000)ferme()});
+
+/* apparition douce des sections */
+var cibles=document.querySelectorAll(".sh,.pb>*,.eq-grid>*,.ac>*,.cmp,.mem,.dm>*,.outils,.ofs>*,.ofs-inc,.sec>*,.niv>*,.garanties,.tm>*,.fqs>*,.cta,.logos-b .logos");
+if(!calme&&"IntersectionObserver" in window){
+ var vu=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");vu.unobserve(e.target)}})},{rootMargin:"0px 0px -8% 0px"});
+ cibles.forEach(function(c){var i=[].indexOf.call(c.parentNode.children,c);c.classList.add("rv");c.style.transitionDelay=Math.min(i,5)*70+"ms";vu.observe(c)})}
+
+/* menu : section en cours soulignée */
+if("IntersectionObserver" in window){var liens={};document.querySelectorAll("#menu a[href^='#']").forEach(function(a){liens[a.getAttribute("href").slice(1)]=a});
+ var ob=new IntersectionObserver(function(es){es.forEach(function(e){var a=liens[e.target.id];if(a&&e.isIntersecting){for(var k in liens)liens[k].classList.remove("ici");a.classList.add("ici")}})},{rootMargin:"-45% 0px -50% 0px"});
+ Object.keys(liens).forEach(function(id){var s=document.getElementById(id);s&&ob.observe(s)})}
+})();
+</script>
+</body>
+</html>
