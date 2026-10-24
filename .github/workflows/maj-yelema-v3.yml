@@ -1,0 +1,20 @@
+name: maj-yelema-v3
+on:
+  push:
+    paths: ['.github/workflows/maj-yelema-v3.yml']
+permissions:
+  contents: write
+jobs:
+  maj:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          curl -sfL 'https://d2ol7oe51mr4n9.cloudfront.net/user_3CLiuDaqihMgfiUGQ0KFfywxTTr/93a1cc31-c862-4b9f-826d-42162dc97e49.zip' -o /tmp/site.zip
+          test $(stat -c %s /tmp/site.zip) -eq 343731
+          rm -rf yelema-site-v3 && mkdir -p yelema-site-v3
+          unzip -o /tmp/site.zip -d yelema-site-v3
+          git rm -q --cached .github/workflows/maj-yelema-v3.yml && rm .github/workflows/maj-yelema-v3.yml
+          git config user.name 'Koffi (Yelema)'
+          git config user.email 'koffi.mstudio@agentmail.to'
+          git add -A && git commit -m 'Page Yelema v3 : cas d usage par secteur' && git push
