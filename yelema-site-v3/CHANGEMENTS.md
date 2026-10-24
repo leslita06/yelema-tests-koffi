@@ -43,3 +43,6 @@ Koffi, 24/10/2026. Préversion non indexée (balise noindex conservée).
 - A. Une page Offres détaillée : ce que l'Expert prend en charge, ce que le salarié garde.
 - B. Les cas d'usage par secteur : banque, distribution, industrie, télécoms, administration, assurance.
 - C. Une page par équipe, à la place des douze anciennes fiches individuelles.
+
+## Ajout du 24/10/2026 (option B, demandée par Leslie)
+22. Nouvelle section « Vos cas d'usage, de bout en bout », placée entre Offres et Sécurité. Elle reprend mot pour mot les sept cas d'usage par secteur de la version 1 : banque et microfinance, distribution, industrie, agro-industrie, télécoms, administration, assurance. Les secteurs s'affichent par onglets, au clic ou au clavier avec les flèches, et s'empilent sur téléphone. Le bouton « Parler de mon projet » mène vers contact@yelema.ai.
