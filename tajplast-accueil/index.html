@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>TAJ PLAST · Maquette de page d'accueil (v1)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--or:#E84E0E;--ve:#159641;--ja:#FFED00;--no:#1B1B1B;--cr:#F6F4EF}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Poppins,sans-serif;color:var(--no);background:#fff;line-height:1.55}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.maquette{background:var(--ja);color:var(--no);text-align:center;font-size:13px;font-weight:600;padding:6px 12px}
+/* en-tête */
+header{background:var(--no);color:#fff;position:sticky;top:0;z-index:20}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.nav img{height:46px;width:auto}
+.menu{display:flex;gap:30px;font-size:15px;font-weight:500}
+.menu a:hover{color:var(--ja)}
+.btn{display:inline-block;background:var(--or);color:#fff;font-weight:700;padding:13px 24px;border-radius:40px;font-size:15px;white-space:nowrap}
+.btn.ghost{background:transparent;border:2px solid #fff}
+.btn.vert{background:var(--ve)}
+.burger{display:none;width:44px;height:44px;border-radius:10px;background:#2a2a2a;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.burger i{display:block;width:20px;height:2px;background:#fff}
+/* héros */
+.hero{position:relative;color:#fff;background:var(--no) url('https://tajplast.com/wp-content/uploads/2025/05/soufflage.jpg') center/cover}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(27,27,27,.94) 0,rgba(27,27,27,.75) 45%,rgba(27,27,27,.15) 100%)}
+.hero .wrap{position:relative;padding-top:110px;padding-bottom:120px}
+.kicker{color:var(--ja);font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.hero h1{font-size:60px;line-height:1.05;font-weight:800;max-width:640px;margin-bottom:22px}
+.hero h1 span{color:var(--or)}
+.hero p{font-size:19px;max-width:540px;color:#e6e6e6;margin-bottom:34px}
+.ctas{display:flex;gap:14px;flex-wrap:wrap}
+.bande{display:flex;height:8px}.bande i{flex:1}
+/* familles */
+section{padding:90px 0}
+.tete{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--or);margin-bottom:14px}
+.tete b{background:var(--or);color:#fff;padding:3px 9px;border-radius:6px}
+h2{font-size:40px;line-height:1.12;font-weight:800;margin-bottom:16px;max-width:720px}
+.intro{font-size:18px;color:#555;max-width:640px;margin-bottom:46px}
+.familles{background:var(--cr)}
+.grille{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.carte{background:#fff;border-radius:18px;overflow:hidden;border-top:6px solid;display:flex;flex-direction:column;transition:transform .2s}
+.carte:hover{transform:translateY(-4px)}
+.carte .img{height:200px;background:#fff;display:flex;align-items:center;justify-content:center;padding:14px}
+.carte .img img{max-height:100%;object-fit:contain}
+.carte .img.cover{padding:0}.carte .img.cover img{width:100%;height:100%;object-fit:cover}
+.carte .txt{padding:20px 22px 24px;flex:1;display:flex;flex-direction:column}
+.carte h3{font-size:20px;font-weight:700;margin-bottom:8px}
+.carte p{font-size:15px;color:#555;flex:1}
+.carte .lien{margin-top:16px;font-weight:700;font-size:15px}
+/* savoir-faire */
+.sf{display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center}
+.sf .photo{border-radius:22px;overflow:hidden;aspect-ratio:4/3;background:url('https://tajplast.com/wp-content/uploads/2025/03/preformes.jpg') center/cover}
+.atouts{display:flex;flex-direction:column;gap:14px;margin-top:28px}
+.at{display:flex;align-items:center;gap:18px;background:var(--cr);border-radius:14px;padding:18px 20px}
+.at b{flex:none;width:118px;text-align:center;color:#fff;font-weight:800;padding:8px 0;border-radius:8px;font-size:15px}
+.at span{font-size:15.5px;font-weight:500}
+/* nouveautés */
+.nouv{background:var(--no);color:#fff}
+.nouv .intro{color:#bdbdbd}
+.nouv .tete{color:var(--ja)}.nouv .tete b{background:var(--ja);color:var(--no)}
+.produits{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.prod{background:#fff;color:var(--no);border-radius:16px;padding:18px;text-align:center}
+.prod img{height:170px;width:100%;object-fit:contain;margin-bottom:12px}
+.prod h4{font-size:17px;font-weight:700}
+.prod small{color:var(--ve);font-weight:600;font-size:13px}
+/* marques */
+.marques{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.marque{border-radius:20px;padding:34px;display:flex;gap:26px;align-items:center}
+.marque.cx{background:#E9F6EE}.marque.io{background:#FDEDE5}
+.marque img{width:150px;height:150px;object-fit:contain;background:#fff;border-radius:16px;padding:10px;flex:none}
+.marque h3{font-size:26px;font-weight:800;margin-bottom:6px}
+.marque.cx h3{color:var(--ve)}.marque.io h3{color:var(--or)}
+.marque p{font-size:15.5px;color:#444}
+/* devis */
+.devis{background:var(--or);color:#fff;padding:70px 0}
+.devis .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.devis h2{margin:0;max-width:640px}
+.devis p{font-size:18px;opacity:.95;margin-top:10px}
+.devis .btn{background:var(--no);font-size:17px;padding:16px 30px}
+/* contact / pied */
+footer{background:var(--no);color:#ddd;padding:70px 0 0}
+.pied{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;padding-bottom:50px}
+.pied img{height:56px;width:auto;margin-bottom:16px}
+.pied h5{color:var(--ja);font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+.pied p,.pied a{font-size:15px;display:block;margin-bottom:6px}
+.copy{border-top:1px solid #333;padding:20px 0;font-size:13px;color:#888}
+.wa{position:fixed;right:22px;bottom:22px;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.25);z-index:30}
+.wa svg{width:32px;height:32px;fill:#fff}
+/* téléphone */
+@media (max-width:900px){
+  .menu,.nav .btn{display:none}.burger{display:flex}
+  .nav{height:66px}.nav img{height:38px}
+  .hero{background-position:70% center}
+  .hero:before{background:linear-gradient(180deg,rgba(27,27,27,.55) 0,rgba(27,27,27,.92) 60%)}
+  .hero .wrap{padding-top:150px;padding-bottom:64px}
+  .hero h1{font-size:38px}.hero p{font-size:16.5px}
+  .ctas .btn{flex:1;text-align:center}
+  section{padding:60px 0}
+  h2{font-size:29px}.intro{font-size:16px;margin-bottom:30px}
+  .grille{grid-template-columns:1fr 1fr;gap:14px}
+  .carte .img{height:130px;padding:8px}.carte .txt{padding:14px}.carte h3{font-size:16px}.carte p{font-size:13.5px}
+  .sf{grid-template-columns:1fr;gap:30px}
+  .at b{width:96px;font-size:13.5px}.at span{font-size:14px}
+  .produits{grid-template-columns:1fr 1fr;gap:12px}.prod img{height:110px}
+  .marques{grid-template-columns:1fr}.marque{padding:22px;gap:16px}.marque img{width:96px;height:96px}.marque h3{font-size:21px}.marque p{font-size:14px}
+  .devis .wrap{flex-direction:column;align-items:flex-start}
+  .devis .btn{width:100%;text-align:center}
+  .pied{grid-template-columns:1fr;gap:28px}
+}
+</style>
+</head>
+<body>
+<div class="maquette">Maquette de travail · ne pas diffuser · v1 du 27/10/2026</div>
+<header><div class="wrap nav">
+  <a href="#"><img src="https://tajplast.com/wp-content/uploads/2025/03/logo-taj-footer.png" alt="TAJ PLAST"></a>
+  <nav class="menu"><a href="#produits">Produits</a><a href="#savoir-faire">Savoir-faire</a><a href="#marques">Nos marques</a><a href="#contact">Contact</a></nav>
+  <a class="btn" href="#devis">Demander un devis</a>
+  <div class="burger"><i></i><i></i><i></i></div>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="kicker">Fabricant à Abidjan · Koumassi</div>
+  <h1>Le plastique qui sert chaque jour, <span>fabriqué ici.</span></h1>
+  <p>Emballages, articles de ménage, mobilier et assainissement, pour les familles comme pour les industriels.</p>
+  <div class="ctas"><a class="btn" href="#devis">Demander un devis</a><a class="btn ghost" href="https://tajplast.com/wp-content/uploads/2025/08/CATALOGUE-2025-TAJ-R.pdf">Voir le catalogue 2025</a></div>
+</div></div>
+<div class="bande"><i style="background:var(--or)"></i><i style="background:var(--ja)"></i><i style="background:var(--ve)"></i></div>
+
+<section class="familles" id="produits"><div class="wrap">
+  <div class="tete"><b>01</b> Nos produits</div>
+  <h2>Quatre familles, une seule usine.</h2>
+  <p class="intro">Choisissez votre besoin : nous fabriquons pour la maison, pour le commerce et pour l'industrie.</p>
+  <div class="grille">
+    <a class="carte" style="border-color:var(--or)" href="#"><div class="img"><img src="https://tajplast.com/wp-content/uploads/2025/03/bouteille-pet.jpg" alt=""></div><div class="txt"><h3>Emballage et industrie</h3><p>Préformes, bouchons, bouteilles PET, bidons et flacons.</p><span class="lien" style="color:var(--or)">Découvrir →</span></div></a>
+    <a class="carte" style="border-color:var(--ve)" href="#"><div class="img cover"><img src="https://tajplast.com/wp-content/uploads/2025/02/ARTICLES-DE-MENAGE.jpg" alt=""></div><div class="txt"><h3>Articles de ménage</h3><p>Cuisine, rangement, seaux, poubelles et articles pour enfants.</p><span class="lien" style="color:var(--ve)">Découvrir →</span></div></a>
+    <a class="carte" style="border-color:#F2C200" href="#"><div class="img"><img src="https://tajplast.com/wp-content/uploads/2025/02/TABLE-CONFORT-ET-CHAISE-IBIZA.png" alt=""></div><div class="txt"><h3>Mobilier et rangement</h3><p>Table Confort, chaises Ibiza, armoires et tiroirs de rangement.</p><span class="lien" style="color:#C79F00">Découvrir →</span></div></a>
+    <a class="carte" style="border-color:var(--no)" href="#"><div class="img"><img src="https://tajplast.com/wp-content/uploads/2025/03/cuve-de-stockage.png" alt=""></div><div class="txt"><h3>Assainissement</h3><p>Cuves de stockage, fosses septiques, puits d'infiltration, tube Isorange.</p><span class="lien">Découvrir →</span></div></a>
+  </div>
+</div></section>
+
+<section id="savoir-faire"><div class="wrap sf">
+  <div class="photo" role="img" aria-label="Préformes TAJ PLAST"></div>
+  <div>
+    <div class="tete" style="color:var(--ve)"><b style="background:var(--ve)">02</b> Notre savoir-faire</div>
+    <h2>Injection et soufflage, maîtrisés à Koumassi.</h2>
+    <p class="intro" style="margin-bottom:0">Nous fabriquons et distribuons des articles industriels et de ménage en plastique, pour la Côte d'Ivoire et l'international, dans le respect des normes en vigueur et de l'environnement.</p>
+    <div class="atouts">
+      <div class="at"><b style="background:var(--or)">Injection</b><span>Préformes, bouchons, ménage, mobilier, rangement</span></div>
+      <div class="at"><b style="background:var(--ve)">Soufflage</b><span>Bouteilles PET, bidons et flacons</span></div>
+      <div class="at"><b style="background:var(--ja);color:var(--no)">Marchés</b><span>Clients en Côte d'Ivoire et à l'international</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="nouv"><div class="wrap">
+  <div class="tete"><b>03</b> Nouveautés</div>
+  <h2>Ce qui vient de sortir de nos moules.</h2>
+  <p class="intro">Disponibles chez nos revendeurs et sur commande.</p>
+  <div class="produits">
+    <div class="prod"><img src="https://tajplast.com/wp-content/uploads/2025/04/CHAISE-IBIZA.png" alt=""><h4>Chaise Ibiza</h4><small>Mobilier</small></div>
+    <div class="prod"><img src="https://tajplast.com/wp-content/uploads/2025/04/POUBELLE-A-PEDALE.png" alt=""><h4>Poubelle à pédale</h4><small>Ménage</small></div>
+    <div class="prod"><img src="https://tajplast.com/wp-content/uploads/2025/04/ABREUVOIR.png" alt=""><h4>Abreuvoir</h4><small>Élevage</small></div>
+    <div class="prod"><img src="https://tajplast.com/wp-content/uploads/2025/02/TIROIR-4-NIVEAUX-BLEU.png" alt=""><h4>Tiroir 4 niveaux</h4><small>Rangement</small></div>
+  </div>
+</div></section>
+
+<section id="marques"><div class="wrap">
+  <div class="tete"><b>04</b> Nos marques</div>
+  <h2>Deux marques pour l'assainissement et le bâtiment.</h2>
+  <p class="intro">Des gammes dédiées, fabriquées par TAJ PLAST.</p>
+  <div class="marques">
+    <div class="marque cx"><img src="https://tajplast.com/wp-content/uploads/2025/03/fosse-septique.png" alt=""><div><h3>Coraxel</h3><p>Fosses septiques, puits d'infiltration et cuves de stockage.</p></div></div>
+    <div class="marque io"><img src="https://tajplast.com/wp-content/uploads/2025/03/tube-orange.png" alt=""><div><h3>Isorange</h3><p>Le tube orange pour vos installations.</p></div></div>
+  </div>
+</div></section>
+
+<div class="devis" id="devis"><div class="wrap">
+  <div><h2>Un projet, une commande en&nbsp;volume&nbsp;?</h2><p>Dites-nous ce qu'il vous faut, nous revenons vers vous avec un devis.</p></div>
+  <a class="btn" href="https://wa.me/2250574874531">Écrire sur WhatsApp</a>
+</div></div>
+
+<footer id="contact"><div class="wrap pied">
+  <div><img src="https://tajplast.com/wp-content/uploads/2025/03/logo-taj-footer.png" alt="TAJ PLAST"><p>Fabrication d'articles de ménage et industriels en plastique, assainissement.</p></div>
+  <div><h5>Usine</h5><p>Abidjan, Koumassi<br>zone industrielle</p></div>
+  <div><h5>Nous joindre</h5><a href="tel:+2252721376666">+225 27 21 37 66 66</a><a href="tel:+2250554153535">+225 05 54 15 35 35</a><a href="mailto:info@tajplast.com">info@tajplast.com</a></div>
+  <div><h5>Nous suivre</h5><a href="https://www.facebook.com/tajplastci/">Facebook</a><a href="https://wa.me/2250574874531">WhatsApp</a></div>
+</div><div class="wrap copy">© TAJ PLAST · Maquette de travail</div></footer>
+
+<a class="wa" href="https://wa.me/2250574874531" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.8.8a3.3 3.3 0 0 0 2.2-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.6-.4z"/></svg></a>
+</body>
+</html>
