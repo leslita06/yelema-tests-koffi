@@ -1,0 +1,137 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Produits · COTIPLAST (maquette)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;600;700&family=Poppins:wght@500;600;700&family=Space+Grotesk:wght@500;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Work Sans',system-ui,sans-serif;color:var(--tx);background:var(--bg);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--hd),sans-serif;line-height:1.12;font-weight:700}
+h2{font-size:clamp(28px,3vw,40px);margin-bottom:14px}
+h3{font-size:21px;margin-bottom:8px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.note{background:#16181B;color:#fff;font:600 12px/1 'Space Grotesk',sans-serif;letter-spacing:.08em;text-align:center;padding:8px 12px;text-transform:uppercase}
+.note b{color:#FD8103}
+header.top{background:#fff;border-bottom:1px solid var(--li);z-index:20}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:82px}
+header.top .logo img{height:50px;width:auto}
+.nav{display:flex;gap:30px;align-items:center;font-weight:500;font-size:15.5px}
+.nav a.on{color:var(--ac)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ac);color:#fff!important;font-weight:600;padding:14px 24px;border-radius:var(--r);font-size:16px;border:0;cursor:pointer}
+.btn.ghost{background:transparent;border:1.5px solid currentColor;color:inherit!important}
+.nav .btn{padding:10px 18px;font-size:15px}
+#m{display:none}.burger{display:none;cursor:pointer;width:30px}
+.burger span{display:block;height:2px;background:currentColor;margin:6px 0}
+.eyebrow{font-family:'Space Grotesk';font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--ac);margin-bottom:16px;display:block}
+.lead{font-size:19px;color:var(--mu);margin:22px 0 32px;max-width:52ch}
+.ph{overflow:hidden;background:#ddd}.ph img{width:100%;height:100%;object-fit:cover}
+.acts{display:flex;gap:14px;flex-wrap:wrap}
+.sec{padding:88px 0}
+.mu{color:var(--mu)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.kpis{padding:44px 0;border-bottom:1px solid var(--li)}
+.kpis .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.k b{display:block;font-family:var(--hd);font-size:38px;line-height:1.1;color:var(--tx)}
+.k span{font-size:14.5px;color:var(--mu)}
+.gam .ph{aspect-ratio:1/1}
+.gam .b{padding:22px 22px 26px}
+.gam .n{font-family:'Space Grotesk';font-weight:700;color:var(--ac);font-size:14px;letter-spacing:.12em}
+.more{display:inline-block;margin-top:12px;font-weight:600;color:var(--ac)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.chips span{border:1px solid var(--li);padding:8px 14px;border-radius:40px;font-size:15px;background:#fff;color:#22262B}
+.refs{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:26px}
+.refs div{height:74px;border:1.5px dashed #c5c9ce;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12.5px;color:#8a9097;text-align:center;padding:6px}
+.cta{padding:72px 0;background:var(--ac);color:#fff}
+.cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.cta h2{color:#fff;margin:0}
+.cta .btn{background:#fff;color:#16181B!important}
+footer{background:#16181B;color:#c9ccd1;padding:64px 0 28px;font-size:15px}
+footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:36px}
+footer h4{color:#fff;font:700 13px 'Space Grotesk';letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+footer li{list-style:none;margin-bottom:8px}
+footer .soc{display:flex;gap:12px;margin-top:6px}
+footer .soc a{width:40px;height:40px;border-radius:50%;background:#2a2e33;display:flex;align-items:center;justify-content:center}
+footer .soc svg{width:18px;height:18px;fill:#fff}
+footer .bot{border-top:1px solid #2e3237;margin-top:40px;padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13.5px}
+.todo{color:#f0a44b}
+.phead{padding:76px 0 56px;background:var(--alt)}
+.phead h1{font-size:clamp(34px,4vw,54px)}
+.prod{display:grid;grid-template-columns:420px 1fr;gap:48px;padding:56px 0;border-top:1px solid var(--li);align-items:start}
+.prod .ph{aspect-ratio:1/1;border-radius:var(--r);position:sticky;top:24px}
+.pl{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.pl .card{padding:20px}
+.pl h4{font-family:var(--hd);font-size:17.5px;margin-bottom:6px}
+.pl p{font-size:15px;color:var(--mu)}
+.pl small{display:block;margin-top:10px;font-size:13px;color:var(--ac);font-weight:600}
+.subnav{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.subnav a{padding:9px 16px;border:1px solid var(--li);border-radius:40px;font-size:15px;background:#fff;color:#22262B}
+.tl{display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin-top:34px;border-top:3px solid var(--ac)}
+.tl div{padding:18px 16px 0 0}
+.tl b{font-family:var(--hd);font-size:26px;display:block}
+.tl span{font-size:14.5px;color:var(--mu)}
+.eng .card{padding:28px}
+.eng .ic{width:46px;height:46px;border-radius:50%;background:var(--ac2);color:#fff;display:flex;align-items:center;justify-content:center;font:700 18px 'Space Grotesk';margin-bottom:16px}
+form .f{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1px solid #cfd3d8;border-radius:var(--r);background:#fff;color:#22262B}
+textarea{min-height:140px}
+.ok{display:none;margin-top:16px;padding:14px 16px;background:#e9f6f0;border-left:4px solid #4FB58B;color:#1c5a43;border-radius:4px}
+.info li{list-style:none;padding:14px 0;border-bottom:1px solid var(--li)}
+.info b{display:block;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--ac);font-family:'Space Grotesk'}
+.map{width:100%;height:340px;border:0;border-radius:var(--r);margin-top:26px}
+.video{aspect-ratio:16/9;width:100%;border:0}
+@media(max-width:900px){
+ .nav{display:none;position:absolute;top:82px;left:0;right:0;background:#fff;flex-direction:column;align-items:flex-start;padding:20px 28px;gap:16px;box-shadow:0 12px 24px rgba(0,0,0,.12)}
+ .nav a{color:#22262B!important}
+ #m:checked~.nav{display:flex}
+ .burger{display:block}
+ header.top .wrap{position:relative}
+ .hero .wrap,.g2,.prod,.pl,form .f{grid-template-columns:1fr!important}
+ .g3,.g4,.kpis .wrap{grid-template-columns:1fr 1fr}
+ .refs{grid-template-columns:repeat(3,1fr)}
+ .tl{grid-template-columns:1fr 1fr 1fr;row-gap:18px}
+ footer .cols{grid-template-columns:1fr 1fr}
+ .sec{padding:60px 0}
+ .prod .ph{position:static}
+ .hero .tx{padding:56px 24px 40px!important}
+ .hero .ph{clip-path:none!important;aspect-ratio:4/3;height:auto!important}
+}
+@media(max-width:560px){.g3,.g4{grid-template-columns:1fr}.kpis .wrap{grid-template-columns:1fr 1fr}.k b{font-size:30px}.tl{grid-template-columns:1fr 1fr}footer .cols{grid-template-columns:1fr}body{font-size:16px}}
+
+:root{--bg:#FBFAF7;--alt:#F1EFE9;--tx:#16181B;--mu:#5a5f66;--ac:#FD8103;--ac2:#4FB58B;--li:#E2DFD8;--hd:'Funnel Display';--r:2px}
+body{background:var(--bg)}
+header.top{position:absolute;left:0;right:0;background:transparent;border:0} header.top a{color:#fff} header.top .nav a.on{color:#fff;border-bottom:2px solid #FD8103}
+header.top.inner{position:relative;background:#16181B}
+.hero{position:relative;min-height:92vh;color:#fff;display:flex;align-items:flex-end;padding:0 0 72px;overflow:hidden}
+.hero .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,14,.55) 0%,rgba(10,12,14,.25) 35%,rgba(10,12,14,.85) 100%)}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{font-size:clamp(44px,6.6vw,96px);font-weight:600;letter-spacing:-.02em;line-height:.98;color:#fff;max-width:14ch}
+.hero .lead{color:#e6e6e6;max-width:56ch}
+.card{border-top:1px solid #16181B;border-radius:0;background:transparent}
+.band{background:#16181B;color:#fff} .band .mu{color:#b9bdc3} .band h2{color:#fff}
+.sec h2{font-weight:600;font-size:clamp(32px,4vw,56px);letter-spacing:-.015em}
+.idx{font-family:'Space Grotesk';font-size:13px;letter-spacing:.2em;color:#FD8103}
+.stripe{height:6px;background:linear-gradient(90deg,#FD8103 0 62%,#4FB58B 62% 100%)}
+</style></head><body><div class="note">Maquette Koffi pour COTIPLAST · <b>Proposition 3 · Premium</b> · non publiée</div>
+<header class="top inner"><div class="wrap"><a class="logo" href="index.html"><img src="../img/logo-blanc.png" alt="COTIPLAST"></a>
+<input type="checkbox" id="m"><label for="m" class="burger" style="color:#fff" aria-label="Menu"><span></span><span></span><span></span></label>
+<nav class="nav"><a href="index.html" class="">Accueil</a><a href="produits.html" class="on">Produits</a><a href="qualite.html" class="">Qualité et engagements</a><a href="contact.html" class="btn">Demander un devis</a></nav></div></header><section class="phead"><div class="wrap"><span class="eyebrow">Nos produits</span><h1>Des emballages fabriqués sur mesure</h1>
+<p class="lead" style="margin-bottom:0">Matière, format, impression : chaque produit s'adapte à votre usage. Choisissez une gamme.</p><div class="subnav"><a href="#films">Films et emballages PE</a><a href="#sacs">Sacs, big bags et liner bags</a><a href="#packaging">Packaging</a><a href="#etiquettes">Étiquettes et manchons</a></div></div></section><section style="padding-bottom:40px"><div class="wrap"><div class="prod" id="films"><div class="ph"><img src="../img/films-pe.jpg" alt="Films et emballages PE"></div>
+<div><div class="n" style="font-family:Space Grotesk;font-weight:700;color:var(--ac);letter-spacing:.12em">01</div><h2>Films et emballages PE</h2><p class="mu">Films en polyéthylène pour l'industrie alimentaire, pharmaceutique et la logistique : solides, imperméables, adaptables à chaque format.</p>
+<div class="pl"><div class="card"><h4>Films et emballages PE</h4><p>Se soudent, se thermoscellent ou se collent pour créer des emballages sur mesure. Large choix d'épaisseurs, de largeurs et de formats.</p><small>Alimentaire · Pharmacie · Logistique · Fardelage et palettisation</small></div></div><a class="btn" href="contact.html?gamme=films" style="margin-top:24px">Demander un devis pour cette gamme</a></div></div><div class="prod" id="sacs"><div class="ph"><img src="../img/big-bags.jpg" alt="Sacs, big bags et liner bags"></div>
+<div><div class="n" style="font-family:Space Grotesk;font-weight:700;color:var(--ac);letter-spacing:.12em">02</div><h2>Sacs, big bags et liner bags</h2><p class="mu">Sacs en polypropylène tissé, du sac standard au big bag, pour l'agriculture, le BTP et l'industrie.</p>
+<div class="pl"><div class="card"><h4>Sacs tissés standards</h4><p>Bandes de polypropylène entrelacées : résistants, durables, imprimables au nom ou au logo.</p><small>Emballages agricoles et industriels</small></div><div class="card"><h4>Sacs tissés laminés</h4><p>Le laminage protège le contenu de l'humidité, de la contamination et des déchirures.</p><small>Emballages agricoles et industriels</small></div><div class="card"><h4>Sacs laminés avec liner</h4><p>Doublés d'une couche intérieure qui forme une barrière renforcée.</p><small>Sucre · Farine · Engrais</small></div><div class="card"><h4>Sacs tissés à valve</h4><p>Remplissage et vidage automatiques sur les lignes de conditionnement.</p><small>Ciment · Farine</small></div><div class="card"><h4>Big bags (FIBC)</h4><p>Grands sacs souples pour le vrac, de 500 kg à 2 000 kg et plus, logo imprimable sur les 4 côtés.</p><small>Grains · Engrais · Sable · Chimie · Sucre</small></div></div><a class="btn" href="contact.html?gamme=sacs" style="margin-top:24px">Demander un devis pour cette gamme</a></div></div><div class="prod" id="packaging"><div class="ph"><img src="../img/packaging.jpg" alt="Packaging"></div>
+<div><div class="n" style="font-family:Space Grotesk;font-weight:700;color:var(--ac);letter-spacing:.12em">03</div><h2>Packaging</h2><p class="mu">Emballages flexibles imprimés, mono ou multicouches, et films complexes à haute barrière.</p>
+<div class="pl"><div class="card"><h4>Emballages flexibles imprimés</h4><p>Mono ou multicouches, imprimés à vos couleurs, format et structure sur mesure.</p><small>Alimentaire · Cosmétique · Grande consommation</small></div><div class="card"><h4>Films complexes</h4><p>Plusieurs couches de matériaux : barrière à l'oxygène, résistance à l'humidité, conservation prolongée.</p><small>Alimentaire · Pharmacie · Chimie</small></div></div><a class="btn" href="contact.html?gamme=packaging" style="margin-top:24px">Demander un devis pour cette gamme</a></div></div><div class="prod" id="etiquettes"><div class="ph"><img src="../img/etiquettes.jpg" alt="Étiquettes et manchons"></div>
+<div><div class="n" style="font-family:Space Grotesk;font-weight:700;color:var(--ac);letter-spacing:.12em">04</div><h2>Étiquettes et manchons</h2><p class="mu">Étiquettes auto-adhésives et manchons rétractables imprimés, pour l'alimentaire, les boissons, la pharmacie et la logistique.</p>
+<div class="pl"><div class="card"><h4>Étiquettes auto-adhésives</h4><p>PE, PP ou papier ; formes, tailles et finitions au choix ; résistent à la chaleur et à l'humidité.</p><small>Alimentation · Boissons · Pharmacie · Logistique</small></div><div class="card"><h4>Manchons rétractables</h4><p>Décor sur 360° qui épouse la forme de l'emballage, livré en bobines ou à l'unité.</p><small>Boissons · Alimentaire · Cosmétique</small></div></div><a class="btn" href="contact.html?gamme=etiquettes" style="margin-top:24px">Demander un devis pour cette gamme</a></div></div></div></section><section class="cta"><div class="wrap"><div><h2>Un projet d'emballage ?</h2><p style="opacity:.92;margin-top:8px">Décrivez votre produit et vos volumes : notre équipe vous répond avec une solution sur mesure.</p></div><a class="btn" href="contact.html">Demander un devis</a></div></section><footer><div class="wrap"><div class="cols">
+<div><img src="../img/logo-blanc.png" alt="COTIPLAST" style="height:56px;margin-bottom:16px"><p>Côte d'Ivoire Plastique. Emballages flexibles et recyclage des déchets, depuis 1992.</p><div class="soc" style="margin-top:18px"><a href="https://www.linkedin.com/company/cotiplast/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg></a><a href="https://www.facebook.com/cotiplast.cotedivoire" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.2c-.3 0-1.3-.2-2.5-.2-2.5 0-4.2 1.5-4.2 4.3v2.2H7.5V12h2.8v10h3.7V12h2.8l.4-3.5z"/></svg></a><a href="https://www.instagram.com/cotiplastci/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM12 2c-2.7 0-3 0-4.1.1C4.2 2.3 2.3 4.2 2.1 7.9 2 9 2 9.3 2 12s0 3 .1 4.1c.2 3.7 2.1 5.6 5.8 5.8 1.1.1 1.4.1 4.1.1s3 0 4.1-.1c3.7-.2 5.6-2.1 5.8-5.8.1-1.1.1-1.4.1-4.1s0-3-.1-4.1c-.2-3.7-2.1-5.6-5.8-5.8C15 2 14.7 2 12 2zm0 1.8c2.7 0 3 0 4 .1 2.6.1 3.9 1.4 4 4 .1 1 .1 1.3.1 4s0 3-.1 4c-.1 2.6-1.4 3.9-4 4-1 .1-1.3.1-4 .1s-3 0-4-.1c-2.6-.1-3.9-1.4-4-4-.1-1-.1-1.3-.1-4s0-3 .1-4c.1-2.6 1.4-3.9 4-4 1-.1 1.3-.1 4-.1z"/></svg></a></div></div>
+<div><h4>Produits</h4><ul><li><a href="produits.html#films">Films et emballages PE</a></li><li><a href="produits.html#sacs">Sacs, big bags et liner bags</a></li><li><a href="produits.html#packaging">Packaging</a></li><li><a href="produits.html#etiquettes">Étiquettes et manchons</a></li></ul></div>
+<div><h4>Entreprise</h4><ul><li><a href="qualite.html">Qualité ISO 9001</a></li><li><a href="qualite.html#engagements">Nos engagements</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+<div><h4>Nous joindre</h4><ul><li><a href="tel:+2252723466427">+225 27 23 46 64 27</a></li><li><a href="tel:+2252723467135">+225 27 23 46 71 35</a></li><li><a href="mailto:cotiplastci@cotiplast.net">cotiplastci@cotiplast.net</a></li><li>Zone industrielle Yopougon, 01 BP 615 Abidjan, Côte d'Ivoire</li><li class="todo">Horaires : à renseigner</li></ul></div>
+</div><div class="bot"><span>© 2026 COTIPLAST · <span class="todo">Mentions légales : à renseigner</span></span><span>Certifiée ISO 9001 : 2015</span></div></div></footer></body></html>
