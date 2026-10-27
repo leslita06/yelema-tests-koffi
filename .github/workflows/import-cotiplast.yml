@@ -1,0 +1,18 @@
+name: import-cotiplast
+on:
+  push:
+    paths: ['.github/workflows/import-cotiplast.yml']
+permissions:
+  contents: write
+jobs:
+  imp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          rm -rf cotiplast-site && mkdir cotiplast-site
+          curl -sfL -o /tmp/s.zip https://d2ol7oe51mr4n9.cloudfront.net/user_3CLiuDaqihMgfiUGQ0KFfywxTTr/725ed8ba-7940-4eb4-91b4-f8095f30b6c3.zip
+          unzip -q /tmp/s.zip -d cotiplast-site
+          git rm -q .github/workflows/import-cotiplast.yml
+          git config user.name koffi && git config user.email koffi@users.noreply.github.com
+          git add -A && git commit -m 'Maquette COTIPLAST (noindex)' && git push
